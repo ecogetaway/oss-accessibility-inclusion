@@ -1,0 +1,177 @@
+name: Accessibility issue
+description: Report a barrier that affects people using assistive technology or alternate interaction modes
+title: "[a11y]: "
+labels:
+  - a11y
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an accessibility issue.
+
+        Please describe the barrier as clearly as possible. Include the affected page, component, command, or workflow, along with your browser, operating system, and any assistive technology used.
+
+        If you are unsure how to classify the issue, focus on the user impact and the steps needed to reproduce it.
+
+  - type: dropdown
+    id: impact_type
+    attributes:
+      label: Affected users or usage mode
+      description: Select the primary impact. Choose the closest match.
+      options:
+        - Screen-reader users
+        - Keyboard-only users
+        - Low-vision users
+        - Users who zoom or reflow content
+        - Users affected by color-only meaning or low contrast
+        - Users affected by motion, animation, or timing
+        - Users with cognitive or attention-related needs
+        - Speech-input users
+        - Captions or transcript users
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Affected area
+      description: Page, route, component, command, screen, or documentation page where the issue occurs
+      placeholder: e.g. Settings > Profile form, /signup, ModalDialog.vue, CLI error output, docs/install.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Issue summary
+      description: Describe the accessibility barrier in plain language
+      placeholder: e.g. The submit button is announced only as "button" in VoiceOver, so screen-reader users cannot tell what it does.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List exact steps to reach and reproduce the issue
+      placeholder: |
+        1. Open ...
+        2. Navigate to ...
+        3. Turn on ...
+        4. Activate or tab to ...
+        5. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead?
+      placeholder: e.g. The button should have a clear accessible name such as "Submit form" and be reachable by keyboard.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+      placeholder: e.g. The control receives focus but is announced only as "button".
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Estimate the impact on task completion
+      options:
+        - Blocks task completion
+        - Major barrier
+        - Moderate barrier
+        - Minor issue
+        - Unsure
+    validations:
+      required: true
+
+  - type: input
+    id: wcag
+    attributes:
+      label: Related WCAG success criteria
+      description: Optional, if known
+      placeholder: e.g. 1.3.1 Info and Relationships; 2.1.1 Keyboard; 4.1.2 Name, Role, Value
+
+  - type: textarea
+    id: user_impact
+    attributes:
+      label: User impact
+      description: Explain how this affects real users trying to complete a task
+      placeholder: e.g. A screen-reader user cannot tell which button submits the form, so the signup flow becomes trial and error.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment_type
+    attributes:
+      label: Surface type
+      options:
+        - Web application
+        - Documentation site
+        - Mobile web
+        - CLI or terminal output
+        - PDF or exported document
+        - Design system component
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: e.g. Safari 18, Firefox 138, Chrome 137
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system and version
+      placeholder: e.g. macOS 15, Windows 11, Ubuntu 24.04, Android 15, iOS 19
+
+  - type: input
+    id: assistive_tech
+    attributes:
+      label: Assistive technology or other software
+      description: Include version when possible
+      placeholder: e.g. VoiceOver, NVDA 2026.1, TalkBack, Dragon, ZoomText, none
+
+  - type: input
+    id: viewport
+    attributes:
+      label: Device or viewport
+      placeholder: e.g. MacBook Air 13-inch, iPhone 15, 390x844 mobile viewport, desktop 1440px
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add screenshots, recordings, copied screen-reader output, console output, or links to relevant audits
+      placeholder: Paste any helpful evidence here.
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested fix or direction
+      description: Optional, if you have an idea for how this could be addressed
+      placeholder: e.g. Replace div role=button with a native button element and add an explicit accessible name.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Reporter checklist
+      options:
+        - label: I described the barrier in terms of user impact, not only technical implementation.
+        - label: I included reproducible steps.
+        - label: I added environment details that may affect reproduction.
+        - label: I checked for an existing accessibility issue before filing this report.
