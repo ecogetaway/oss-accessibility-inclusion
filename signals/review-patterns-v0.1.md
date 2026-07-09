@@ -1,6 +1,6 @@
-# Signals v0.1 — Patterns Across the First Five Case Studies
+# Signals v0.1 — Patterns Across the First Six Case Studies
 
-Synthesized from the five case studies scored against [`review-rubric.md`](../review-rubric.md).
+Synthesized from six case studies scored against [`review-rubric.md`](../review-rubric.md). Five were added in v0.1 (all merged, all fast); a sixth — a stalled, closed-unmerged PR — was added in v0.2 specifically to test the open question v0.1 raised (see below).
 
 ## Scores at a glance
 
@@ -10,6 +10,7 @@ Synthesized from the five case studies scored against [`review-rubric.md`](../re
 | [MUI #48572](../case-studies/mui-material-ui-pr48572.md) | AT-specific behavior | 10/12 |
 | [Bootstrap #42539](../case-studies/bootstrap-pr42539.md) | Semantics / reading order | 6/12 |
 | [Bootstrap #42500](../case-studies/bootstrap-pr42500.md) | Complex widget interaction | 6/12 |
+| [Bootstrap #41607](../case-studies/bootstrap-pr41607.md) | Complex widget interaction (stalled) | 4/12 |
 | [Storybook #35321](../case-studies/storybook-pr35321.md) | Accessibility × i18n intersection | 4/12 |
 
 ## Pattern 1 — AT-testing evidence is the criterion that separates high and low scores, not WCAG citation
@@ -28,6 +29,11 @@ The Storybook PR had by far the most review activity of the five — two differe
 
 The VS Code case is the outlier specifically because the issue that fed it wasn't a community bug report — it came from a named internal accessibility-testing role, tagged with the exact WCAG criterion and a rule that only a verified tester could close it. The PR review itself was almost a formality; the rigor happened at issue-filing time. This suggests the highest-leverage intervention for other projects isn't a better PR template, but a better *issue* template that captures WCAG mapping and AT evidence before a PR ever opens.
 
-## Open question for v0.2
+## Pattern 5 — the "fast review" pattern in v0.1 was a sampling artifact, not a real difference from i18n
 
-All five 2026 PRs in this set were either merged same-day/same-week or (in Storybook's case) merged despite an unverified core claim — none stalled or were rejected. The companion i18n repo's case studies show the opposite pattern (long stalls, silent closes). Is accessibility work actually reviewed *faster* than i18n work in these projects, or does this sample simply not yet include a stalled/rejected a11y PR? Worth deliberately sourcing a stalled or closed-unmerged a11y PR for v0.2 to test this.
+The open question in the original v0.1 draft of this document was whether accessibility PRs are reviewed faster than the stalled, silently-closed i18n PRs documented in the companion repo — every v0.1 case study merged same-day or same-week. [Bootstrap #41607](../case-studies/bootstrap-pr41607.md), added to test this, shows the same silent-stall pattern the i18n case studies show: eleven months with zero review, then a closing comment that never evaluates the fix on its merits. The five fast-merging PRs in this sample weren't representative — they were mostly maintainer self-merges of maintainer-authored PRs (Bootstrap #42539, #42500) or PRs that happened to get a specific reviewer's attention (MUI, VS Code). A community contributor's PR, on the same category of bug, in the same repository, waited nearly a year for any response at all. **Whether a PR gets reviewed at all appears to depend more on who opened it — maintainer vs. outside contributor — than on the accessibility domain itself.**
+
+## Open questions for v0.3
+
+- Is the maintainer-vs-contributor gap seen here (Bootstrap #42539/#42500 vs. #41607) consistent across other projects, or specific to how Bootstrap currently triages `accessibility`-labeled PRs?
+- Bootstrap #41607 was closed for architectural reasons (v6's native `<dialog>` obsoleted the code), not because anyone judged the fix wrong. Worth sourcing a case where an a11y PR was closed after actual maintainer disagreement about the fix, to separate "never reviewed" from "reviewed and rejected."
