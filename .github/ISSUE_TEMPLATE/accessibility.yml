@@ -100,8 +100,10 @@ body:
     id: wcag
     attributes:
       label: Related WCAG success criteria
-      description: Optional, if known
+      description: Name the closest success criterion even if the mapping isn't exact — this is the single strongest predictor of whether a report gets a substantive review. If genuinely unsure, write "unsure" rather than leaving it blank.
       placeholder: e.g. 1.3.1 Info and Relationships; 2.1.1 Keyboard; 4.1.2 Name, Role, Value
+    validations:
+      required: true
 
   - type: textarea
     id: user_impact
@@ -139,11 +141,23 @@ body:
       label: Operating system and version
       placeholder: e.g. macOS 15, Windows 11, Ubuntu 24.04, Android 15, iOS 19
 
+  - type: dropdown
+    id: at_verified
+    attributes:
+      label: Verified with assistive technology?
+      description: Was this barrier actually observed using real AT (not just inferred from code or automated scan output)? Case-study evidence in this repo shows this field, more than a WCAG citation, predicts whether a report gets a substantive review.
+      options:
+        - "Yes — observed directly with AT (name it below)"
+        - "No — inferred from code, DOM, or automated scan only"
+        - Unsure
+    validations:
+      required: true
+
   - type: input
     id: assistive_tech
     attributes:
       label: Assistive technology or other software
-      description: Include version when possible
+      description: Name and version, if any was used to verify the issue above
       placeholder: e.g. VoiceOver, NVDA 2026.1, TalkBack, Dragon, ZoomText, none
 
   - type: input
