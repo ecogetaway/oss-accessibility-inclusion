@@ -10,7 +10,7 @@
 ## v0.2 — in progress
 - [x] Issue and PR templates now require a WCAG mapping and an explicit AT-verification field.
 - [x] **Sourced a stalled/rejected a11y PR** — [Bootstrap #41607](case-studies/bootstrap-pr41607.md), open 11 months with zero review, closed unmerged for unrelated architectural reasons. Result: the "a11y reviewed faster than i18n" pattern in v0.1 was a sampling artifact — see [Pattern 5](signals/review-patterns-v0.1.md#pattern-5--the-fast-review-pattern-in-v01-was-a-sampling-artifact-not-a-real-difference-from-i18n). The real driver looks like author identity (maintainer vs. outside contributor), not the accessibility domain.
-- [ ] **`a11y-signals.yml`.** A machine-readable file for projects to declare their accessibility posture (conformance target, review capacity, AT test matrix), mirroring the i18n-signals.yml concept in [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion).
+- [x] **`a11y-signals.yml` schema drafted** ([`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml)), with two worked examples in [`signals/examples/`](signals/examples/) — mirrors the i18n-signals.yml concept in [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion). Still open: a validator tool (planned for Phase 3) and getting a real project to adopt it (Ecosystem Adoption target).
 - [ ] **Comparative note across the two companion repos** once both have enough case studies — a11y vs. i18n review patterns is the actual thesis of running two parallel studies.
 - [ ] Expand the rubric's score bands with real threshold data once there are 10+ case studies to calibrate against.
 

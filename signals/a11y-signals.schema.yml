@@ -1,0 +1,73 @@
+# a11y-signals.yml — schema v0.1 (draft)
+#
+# A machine-readable accessibility-posture declaration any open source project can
+# adopt, placed at the repository root, analogous to CODEOWNERS. It lets a
+# contributor check — before opening an issue or PR — whether a project can
+# actually review accessibility work, and it gives maintainers a structured place
+# to declare what they hold themselves to.
+#
+# This file is the schema/reference, not something to copy as-is. Delete comments
+# you don't need; every field is optional except `schema_version` and `project`.
+# See signals/examples/ for filled examples, including this repository's own.
+
+schema_version: "0.1"
+
+project:
+  name: "org/repo"
+  repo_url: "https://github.com/org/repo"
+
+# The WCAG conformance level this project targets for user-facing changes.
+# One of: WCAG 2.0 A | WCAG 2.0 AA | WCAG 2.1 AA | WCAG 2.2 AA | WCAG 2.2 AAA | none-declared
+conformance_target: "WCAG 2.2 AA"
+
+# Link to this project's accessibility statement, if one exists (see this repo's
+# own ACCESSIBILITY.md for a template).
+accessibility_statement_url: "https://github.com/org/repo/blob/main/ACCESSIBILITY.md"
+
+review_capacity:
+  # Does at least one maintainer have hands-on assistive-technology experience
+  # and actually review accessibility PRs on that basis? Case-study evidence in
+  # this repo (see ../case-studies/) shows this is the single strongest
+  # predictor of review quality — more than a WCAG citation.
+  has_at_experienced_reviewer: false
+
+  # Named maintainers willing to be @-mentioned on accessibility issues/PRs.
+  # Leave empty if none — an honest empty list is more useful than a stale one.
+  reviewers: []
+  # Example entry:
+  # reviewers:
+  #   - github_handle: "example-maintainer"
+  #     assistive_technologies: ["VoiceOver", "NVDA"]
+
+  # Target time to first substantive review on an issue/PR labeled accessibility.
+  # Set to null if no target exists yet.
+  response_time_target_days: null
+
+# Assistive technology this project actively tests against, if any. An empty
+# list is a legitimate, honest declaration for an early-stage project — it's
+# the signal a contributor needs before investing effort, not a score to game.
+at_test_matrix: []
+# Example entry:
+# at_test_matrix:
+#   - technology: "VoiceOver"
+#     platform: "macOS + Safari"
+#     maintained: true
+#   - technology: "NVDA"
+#     platform: "Windows + Chrome/Firefox"
+#     maintained: false
+
+contribution_pathway:
+  issue_template_url: ".github/ISSUE_TEMPLATE/accessibility.yml"
+  pr_template_url: ".github/PULL_REQUEST_TEMPLATE/accessibility.md"
+  contributing_guide_url: "CONTRIBUTING.md"
+  # Whether the templates above make a WCAG mapping field required (not just
+  # optional) at issue-filing time. Case-study evidence (see
+  # ../case-studies/vscode-pr324192.md) suggests requiring this at the issue
+  # stage, not just the PR stage, correlates with better review outcomes.
+  requires_wcag_mapping: false
+  requires_at_verification: false
+
+# ISO 8601 date this file was last reviewed or updated by a maintainer. A stale
+# date is itself a signal — treat this file as something to revisit, not
+# something to write once and forget.
+last_reviewed: "2026-01-01"
