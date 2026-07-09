@@ -90,8 +90,9 @@ This repository also provides drop-in files any project can adopt today:
 - [`.github/ISSUE_TEMPLATE/accessibility.yml`](.github/ISSUE_TEMPLATE/accessibility.yml) — a structured accessibility issue form capturing user impact, reproduction steps, environment, and WCAG mapping.
 - [`.github/PULL_REQUEST_TEMPLATE/accessibility.md`](.github/PULL_REQUEST_TEMPLATE/accessibility.md) — an a11y PR template with user impact, WCAG mapping, verification steps, and a reviewer checklist designed so non-expert maintainers can review with more confidence.
 - A CONTRIBUTING.md accessibility section (see [`CONTRIBUTING.md`](CONTRIBUTING.md)).
+- [`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml) — a machine-readable file any project can place at its repo root, analogous to CODEOWNERS, to declare its accessibility posture: conformance target, review capacity, and AT test matrix. Schema v0.1 (draft); see [`signals/examples/`](signals/examples/) for two worked examples, including this repository's own. Mirrors the i18n-signals.yml concept in the companion repository.
 
-Planned: `a11y-signals.yml` — a machine-readable file for projects to declare their accessibility posture (conformance target, review capacity, AT test matrix), analogous to the i18n-signals.yml concept in the companion repository.
+Not yet built: a validator tool for the schema above (planned for a later phase — see [`roadmap.md`](roadmap.md)).
 
 ---
 
@@ -145,5 +146,6 @@ None of these centers what this repository centers: structured case studies of h
 - Issue and PR templates updated (v0.2) to require WCAG mapping and an explicit AT-verification field, based directly on case-study evidence for what predicts review quality.
 - Six case studies completed and scored across Bootstrap, MUI, VS Code, and Storybook (all 2026 PRs, plus one 2025–2026 stalled PR); scores range 4/12 to 11/12.
 - Cross-case signals synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md): AT-testing evidence (not WCAG citation) predicts review quality; self-merge by a rights-holding maintainer is the default failure mode; automated review volume does not substitute for accessibility review; whether a PR gets reviewed at all appears to depend more on author identity (maintainer vs. outside contributor) than on the accessibility domain itself.
+- `a11y-signals.yml` schema drafted ([`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml)), with two worked examples — a machine-readable accessibility-posture declaration any project can place at its repo root, analogous to CODEOWNERS.
 - Companion project: [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) — same method, applied to internationalization.
 - Licensed under Apache 2.0.

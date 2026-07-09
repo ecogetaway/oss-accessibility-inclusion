@@ -1,0 +1,44 @@
+# ILLUSTRATIVE EXAMPLE — not an officially published file from any project.
+# This is inferred from public evidence in ../case-studies/vscode-pr324192.md
+# (a formal, tagged internal accessibility-testing process feeding WCAG-mapped
+# issues into the repo) to show what the schema looks like for a project with
+# more accessibility review infrastructure than this repo currently has. No
+# project referenced in this repo's case studies has adopted this schema; do
+# not represent this as their declared posture.
+
+schema_version: "0.1"
+
+project:
+  name: "example-org/example-project"
+  repo_url: "https://github.com/example-org/example-project"
+
+conformance_target: "WCAG 2.1 AA"
+
+accessibility_statement_url: "https://github.com/example-org/example-project/blob/main/ACCESSIBILITY.md"
+
+review_capacity:
+  has_at_experienced_reviewer: true
+  reviewers:
+    - github_handle: "example-a11y-reviewer"
+      assistive_technologies: ["VoiceOver", "NVDA", "JAWS"]
+  response_time_target_days: 7
+
+at_test_matrix:
+  - technology: "VoiceOver"
+    platform: "macOS + Safari"
+    maintained: true
+  - technology: "NVDA"
+    platform: "Windows + Chrome"
+    maintained: true
+  - technology: "Automated contrast checker"
+    platform: "CI pipeline"
+    maintained: true
+
+contribution_pathway:
+  issue_template_url: ".github/ISSUE_TEMPLATE/accessibility.yml"
+  pr_template_url: ".github/PULL_REQUEST_TEMPLATE/accessibility.md"
+  contributing_guide_url: "CONTRIBUTING.md"
+  requires_wcag_mapping: true
+  requires_at_verification: true
+
+last_reviewed: "2026-07-01"
