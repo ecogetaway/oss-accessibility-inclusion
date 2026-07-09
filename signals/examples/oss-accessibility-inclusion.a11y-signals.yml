@@ -1,0 +1,33 @@
+# This repository's own a11y-signals.yml, filled in honestly — including the
+# gaps. This is a worked example of the schema, not a claim of maturity.
+
+schema_version: "0.1"
+
+project:
+  name: "ecogetaway/oss-accessibility-inclusion"
+  repo_url: "https://github.com/ecogetaway/oss-accessibility-inclusion"
+
+conformance_target: "WCAG 2.2 AA"
+
+accessibility_statement_url: "https://github.com/ecogetaway/oss-accessibility-inclusion/blob/main/ACCESSIBILITY.md"
+
+review_capacity:
+  # Honest "no": this is a two-person team, not yet a maintainer with confirmed
+  # hands-on AT experience reviewing every accessibility-labeled contribution.
+  # See roadmap.md for the plan to close this gap.
+  has_at_experienced_reviewer: false
+  reviewers: []
+  response_time_target_days: null
+
+# No automated accessibility checks in CI yet — matches the "Known limitations"
+# section already declared in ACCESSIBILITY.md.
+at_test_matrix: []
+
+contribution_pathway:
+  issue_template_url: ".github/ISSUE_TEMPLATE/accessibility.yml"
+  pr_template_url: ".github/PULL_REQUEST_TEMPLATE/accessibility.md"
+  contributing_guide_url: "CONTRIBUTING.md"
+  requires_wcag_mapping: true
+  requires_at_verification: true
+
+last_reviewed: "2026-07-09"
