@@ -74,8 +74,9 @@ Each case study records the contribution, the review pattern observed, and the i
 | MUI Material UI | [#48572](https://github.com/mui/material-ui/pull/48572) — autocomplete focus fix for VoiceOver | AT-specific behavior |
 | VS Code | [#324192](https://github.com/microsoft/vscode/pull/324192) — warning icon colors, 2026 Light theme | Contrast / theming |
 | Storybook | [#35321](https://github.com/storybookjs/storybook/pull/35321) — lang attribute handling in preview | Accessibility × i18n intersection |
+| Bootstrap | [#41607](https://github.com/twbs/bootstrap/pull/41607) — modal focus-trap fix, closed unmerged after 11 months | Complex widget interaction (stalled) |
 
-Full write-ups: [Bootstrap #42539](case-studies/bootstrap-pr42539.md) · [Bootstrap #42500](case-studies/bootstrap-pr42500.md) · [MUI #48572](case-studies/mui-material-ui-pr48572.md) · [VS Code #324192](case-studies/vscode-pr324192.md) · [Storybook #35321](case-studies/storybook-pr35321.md).
+Full write-ups: [Bootstrap #42539](case-studies/bootstrap-pr42539.md) · [Bootstrap #42500](case-studies/bootstrap-pr42500.md) · [MUI #48572](case-studies/mui-material-ui-pr48572.md) · [VS Code #324192](case-studies/vscode-pr324192.md) · [Storybook #35321](case-studies/storybook-pr35321.md) · [Bootstrap #41607](case-studies/bootstrap-pr41607.md).
 
 Case study write-ups live in [`case-studies/`](case-studies/). The scoring checklist lives in [`review-rubric.md`](review-rubric.md). Cross-case patterns are synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md).
 
@@ -141,7 +142,8 @@ None of these centers what this repository centers: structured case studies of h
 
 - Repository established with reusable templates: ACCESSIBILITY.md, issue template, PR template, CONTRIBUTING section.
 - Review rubric v0.1 finalized ([`review-rubric.md`](review-rubric.md)): six criteria, 0–2 points each.
-- Five case studies completed and scored across Bootstrap, MUI, VS Code, and Storybook (all 2026 PRs); scores range 4/12 to 11/12.
-- First cross-case signals synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md): AT-testing evidence (not WCAG citation) predicts review quality; self-merge by a rights-holding maintainer is the default failure mode; automated review volume does not substitute for accessibility review.
+- Issue and PR templates updated (v0.2) to require WCAG mapping and an explicit AT-verification field, based directly on case-study evidence for what predicts review quality.
+- Six case studies completed and scored across Bootstrap, MUI, VS Code, and Storybook (all 2026 PRs, plus one 2025–2026 stalled PR); scores range 4/12 to 11/12.
+- Cross-case signals synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md): AT-testing evidence (not WCAG citation) predicts review quality; self-merge by a rights-holding maintainer is the default failure mode; automated review volume does not substitute for accessibility review; whether a PR gets reviewed at all appears to depend more on author identity (maintainer vs. outside contributor) than on the accessibility domain itself.
 - Companion project: [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) — same method, applied to internationalization.
 - Licensed under Apache 2.0.
