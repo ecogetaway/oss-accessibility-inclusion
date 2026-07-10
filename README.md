@@ -10,7 +10,7 @@ This is a companion project to [oss-language-inclusion](https://github.com/ecoge
 
 **Provenance.** Part of the **OSS Infrastructure Initiative** (Sanjay C. and Aniruddh Raghavendra) — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
 
-_Status: active — the current development focus. Six scored case studies, a review rubric, and a draft a11y-signals.yml._
+_Status: six scored case studies, a review rubric, and a draft a11y-signals.yml._
 
 ## Terminology used in this repo
 
@@ -137,7 +137,7 @@ Three repositories, one method: document how a contribution domain actually fail
 | Domain | Repository | What it builds | Maturity |
 | --- | --- | --- | --- |
 | Internationalization | [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) | Translated-string contribution evidence + `i18n-security-lint` CI tooling | Most developed; method published in CACM Blog and DevOps.com |
-| Accessibility | [oss-accessibility-inclusion](https://github.com/ecogetaway/oss-accessibility-inclusion) | How accessibility PRs are reviewed; review rubric + draft `a11y-signals.yml` | Active — current development focus |
+| Accessibility | [oss-accessibility-inclusion](https://github.com/ecogetaway/oss-accessibility-inclusion) | How accessibility PRs are reviewed; review rubric + draft `a11y-signals.yml` | Active |
 | AI contribution | [oss-ai-contribution-policy](https://github.com/ecogetaway/oss-ai-contribution-policy) | Machine-readable `ai-contribution-policy.yml` standard (verification over detection) | Early evidence-gathering |
 
 ---
