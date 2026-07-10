@@ -8,6 +8,10 @@ This repository investigates whether accessibility inclusion is a missing infras
 
 This is a companion project to [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion), applying the same evidence-first method to a second under-served contribution domain.
 
+**Provenance.** Part of the **OSS Infrastructure Initiative** (Sanjay C. and Aniruddh Raghavendra) — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
+
+_Status: active — the current development focus. Six scored case studies, a review rubric, and a draft a11y-signals.yml._
+
 ## Terminology used in this repo
 
 - **a11y** = accessibility ("a", 11 letters, "y")
@@ -123,6 +127,18 @@ Contributors with disabilities are welcome. If an accommodation would help with 
     └── .github/
         ├── ISSUE_TEMPLATE/accessibility.yml
         └── PULL_REQUEST_TEMPLATE/accessibility.md
+
+---
+
+## Companion Projects
+
+Three repositories, one method: document how a contribution domain actually fails in real repositories, then build the smallest machine-readable piece of infrastructure the evidence says is missing. Each domain's adoption compounds the others' credibility.
+
+| Domain | Repository | What it builds | Maturity |
+| --- | --- | --- | --- |
+| Internationalization | [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) | Translated-string contribution evidence + `i18n-security-lint` CI tooling | Most developed; method published in CACM Blog and DevOps.com |
+| Accessibility | [oss-accessibility-inclusion](https://github.com/ecogetaway/oss-accessibility-inclusion) | How accessibility PRs are reviewed; review rubric + draft `a11y-signals.yml` | Active — current development focus |
+| AI contribution | [oss-ai-contribution-policy](https://github.com/ecogetaway/oss-ai-contribution-policy) | Machine-readable `ai-contribution-policy.yml` standard (verification over detection) | Early evidence-gathering |
 
 ---
 
