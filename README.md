@@ -12,6 +12,25 @@ This is a companion project to [oss-language-inclusion](https://github.com/ecoge
 
 _Status: six scored case studies, a review rubric, and a draft a11y-signals.yml._
 
+## The Findings, First
+
+Six real accessibility PRs across Bootstrap, MUI, VS Code, and Storybook, each scored 0–12 against a [six-criterion review rubric](review-rubric.md):
+
+| Case study | Category | Score |
+| --- | --- | --- |
+| [VS Code #324192](case-studies/vscode-pr324192.md) | Contrast / theming | **11/12** |
+| [MUI #48572](case-studies/mui-material-ui-pr48572.md) | AT-specific behavior | **10/12** |
+| [Bootstrap #42539](case-studies/bootstrap-pr42539.md) | Semantics / reading order | 6/12 |
+| [Bootstrap #42500](case-studies/bootstrap-pr42500.md) | Complex widget interaction | 6/12 |
+| [Bootstrap #41607](case-studies/bootstrap-pr41607.md) | Stalled 11 months, closed unmerged | 4/12 |
+| [Storybook #35321](case-studies/storybook-pr35321.md) | Accessibility × i18n | 4/12 |
+
+Three findings the scores surface — full synthesis in [signals/review-patterns-v0.1.md](signals/review-patterns-v0.1.md):
+
+1. **Assistive-technology testing evidence — not WCAG citation — predicts review quality.** A PR that cited WCAG criteria by number still shipped same-day with zero reviewers; the top scorers both had someone actually verify with AT.
+2. **The most heavily reviewed PR scored the lowest.** Dozens of comments from two AI review bots, none engaging the accessibility claim. Review volume is not accessibility review.
+3. **Whether a PR gets reviewed at all tracks who opened it** — maintainer self-merges shipped same-day; a contributor's fix waited eleven months for any response.
+
 ## Terminology used in this repo
 
 - **a11y** = accessibility ("a", 11 letters, "y")
