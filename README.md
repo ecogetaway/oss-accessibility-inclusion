@@ -31,6 +31,18 @@ Three findings the scores surface — full synthesis in [signals/review-patterns
 2. **The most heavily reviewed PR scored the lowest.** Dozens of comments from two AI review bots, none engaging the accessibility claim. Review volume is not accessibility review.
 3. **Whether a PR gets reviewed at all tracks who opened it** — maintainer self-merges shipped same-day; a contributor's fix waited eleven months for any response.
 
+### Try this first
+
+| Priority | Action |
+| --- | --- |
+| **1. Primary** | Steal the [accessibility PR template](.github/PULL_REQUEST_TEMPLATE/accessibility.md) for your next a11y contribution (or paste it into an existing PR description) |
+| **2. Secondary** | Add [`ACCESSIBILITY.md`](ACCESSIBILITY.md) to your project so contributors know your conformance target and how to test |
+| **3. Then** | [Tell us what broke or helped](https://github.com/ecogetaway/oss-accessibility-inclusion/issues/new/choose) — maintainer and contributor feedback reshapes the rubric |
+
+The research (scoreboard + case studies) is here so you can see *why* the template asks for AT evidence. The template is the thing to use tomorrow.
+
+Please do **not** ask people to star the repo. The useful signal is a template trial or a scored disagreement with a case study.
+
 ## Terminology used in this repo
 
 - **a11y** = accessibility ("a", 11 letters, "y")
@@ -107,23 +119,24 @@ Case study write-ups live in [`case-studies/`](case-studies/). The scoring check
 
 ## Reusable Templates
 
-This repository also provides drop-in files any project can adopt today:
+Drop-in files any project can adopt today (same links as [Try this first](#try-this-first)):
 
-- [`ACCESSIBILITY.md`](ACCESSIBILITY.md) — a project accessibility statement: scope, conformance target, testing expectations, known limitations, and contact path.
-- [`.github/ISSUE_TEMPLATE/accessibility.yml`](.github/ISSUE_TEMPLATE/accessibility.yml) — a structured accessibility issue form capturing user impact, reproduction steps, environment, and WCAG mapping.
-- [`.github/PULL_REQUEST_TEMPLATE/accessibility.md`](.github/PULL_REQUEST_TEMPLATE/accessibility.md) — an a11y PR template with user impact, WCAG mapping, verification steps, and a reviewer checklist designed so non-expert maintainers can review with more confidence.
-- A CONTRIBUTING.md accessibility section (see [`CONTRIBUTING.md`](CONTRIBUTING.md)).
-- [`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml) — a machine-readable file any project can place at its repo root, analogous to CODEOWNERS, to declare its accessibility posture: conformance target, review capacity, and AT test matrix. Schema v0.1 (draft); see [`signals/examples/`](signals/examples/) for two worked examples, including this repository's own. Mirrors the i18n-signals.yml concept in the companion repository.
+- [`ACCESSIBILITY.md`](ACCESSIBILITY.md) — project accessibility statement: scope, conformance target, testing expectations, known limitations, contact path.
+- [`.github/ISSUE_TEMPLATE/accessibility.yml`](.github/ISSUE_TEMPLATE/accessibility.yml) — structured accessibility issue form.
+- [`.github/PULL_REQUEST_TEMPLATE/accessibility.md`](.github/PULL_REQUEST_TEMPLATE/accessibility.md) — **primary CTA** — a11y PR template with user impact, WCAG mapping, AT verification, and a non-expert reviewer checklist.
+- CONTRIBUTING.md accessibility section — see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+- [`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml) — draft machine-readable posture file (analogous to CODEOWNERS); examples in [`signals/examples/`](signals/examples/).
 
-Not yet built: a validator tool for the schema above (planned for a later phase — see [`roadmap.md`](roadmap.md)).
+Not yet built: a validator for the signals schema (see [`roadmap.md`](roadmap.md)).
 
 ---
 
 ## How to Participate
 
-- Suggest a recent a11y PR worth studying: open an issue with the `case-study-candidate` label.
-- Share your experience contributing or reviewing accessibility work: open an issue with the `community-feedback` label.
-- Maintainers: tell us what would make a11y PRs reviewable for you — that input directly shapes the rubric and templates.
+1. **Use a template** on a real a11y issue or PR, then open feedback here.
+2. Suggest a recent a11y PR worth studying: issue label `case-study-candidate`.
+3. Share reviewing/contributing experience: label `community-feedback`.
+4. Maintainers: tell us what would make a11y PRs reviewable for you.
 
 Contributors with disabilities are welcome. If an accommodation would help with communication, review format, timing, or how evidence is shared, please say so in any issue.
 
