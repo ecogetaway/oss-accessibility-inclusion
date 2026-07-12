@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Accessibility PR review scoreboard</title>
+  <desc id="desc">Six scored accessibility pull requests. VS Code 11 of 12, MUI 10 of 12, two Bootstrap PRs at 6 of 12, Storybook and a stalled Bootstrap PR at 4 of 12. Finding: the most heavily reviewed PR scored lowest.</desc>
+  <defs>
+    <style>
+      .bg { fill: #EEF1F4; }
+      .card { fill: #FFFFFF; stroke: #CBD2D9; stroke-width: 1; }
+      .ink { fill: #141B2E; font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif; }
+      .soft { fill: #4C5768; font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif; }
+      .mono { fill: #5F6B7C; font-family: 'IBM Plex Mono', Menlo, Consolas, monospace; }
+      .teal { fill: #2F6F6B; }
+      .tealbg { fill: #E4EEED; }
+      .amber { fill: #A8752F; }
+      .amberbg { fill: #F4E9DA; }
+      .line { stroke: #DEE3E8; stroke-width: 1; }
+      .bar-hi { fill: #2F6F6B; }
+      .bar-mid { fill: #6B8F8C; }
+      .bar-lo { fill: #A8752F; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <rect class="card" x="48" y="40" width="1104" height="595" rx="8"/>
+
+  <text class="mono teal" x="80" y="88" font-size="16" letter-spacing="1.5">OSS ACCESSIBILITY INCLUSION</text>
+  <text class="ink" x="80" y="138" font-size="36" font-weight="600">How six a11y PRs actually scored</text>
+  <text class="soft" x="80" y="172" font-size="18">Review volume is not accessibility review. AT evidence predicts quality.</text>
+
+  <!-- column headers -->
+  <text class="mono" x="80" y="230" font-size="13">CASE STUDY</text>
+  <text class="mono" x="520" y="230" font-size="13">CATEGORY</text>
+  <text class="mono" x="820" y="230" font-size="13">SCORE / 12</text>
+  <line class="line" x1="80" y1="244" x2="1112" y2="244"/>
+
+  <!-- rows -->
+  <!-- VS Code 11 -->
+  <text class="ink" x="80" y="286" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">VS Code #324192</text>
+  <text class="soft" x="520" y="286" font-size="16">Contrast / theming</text>
+  <rect class="bar-hi" x="820" y="270" width="220" height="18" rx="3"/>
+  <text fill="#EEF1F4" x="910" y="284" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">11</text>
+
+  <!-- MUI 10 -->
+  <text class="ink" x="80" y="336" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">MUI #48572</text>
+  <text class="soft" x="520" y="336" font-size="16">AT-specific behavior</text>
+  <rect class="bar-hi" x="820" y="320" width="200" height="18" rx="3"/>
+  <text fill="#EEF1F4" x="900" y="334" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">10</text>
+
+  <!-- Bootstrap 6 -->
+  <text class="ink" x="80" y="386" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42539</text>
+  <text class="soft" x="520" y="386" font-size="16">Semantics / reading order</text>
+  <rect class="bar-mid" x="820" y="370" width="120" height="18" rx="3"/>
+  <text fill="#EEF1F4" x="870" y="384" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">6</text>
+
+  <!-- Bootstrap 6 -->
+  <text class="ink" x="80" y="436" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42500</text>
+  <text class="soft" x="520" y="436" font-size="16">Complex widget interaction</text>
+  <rect class="bar-mid" x="820" y="420" width="120" height="18" rx="3"/>
+  <text fill="#EEF1F4" x="870" y="434" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">6</text>
+
+  <!-- Bootstrap stalled 4 -->
+  <text class="ink" x="80" y="486" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #41607</text>
+  <text class="soft" x="520" y="486" font-size="16">Stalled 11 months</text>
+  <rect class="bar-lo" x="820" y="470" width="80" height="18" rx="3"/>
+  <text fill="#EEF1F4" x="850" y="484" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">4</text>
+
+  <!-- Storybook 4 - callout -->
+  <rect class="amberbg" x="72" y="508" width="1040" height="52" rx="6"/>
+  <text class="ink" x="88" y="540" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Storybook #35321</text>
+  <text class="amber" x="520" y="540" font-size="16" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Most reviewed · lowest score</text>
+  <rect class="bar-lo" x="820" y="524" width="80" height="18" rx="3"/>
+  <text fill="#EEF1F4" x="850" y="538" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">4</text>
+
+  <text class="mono" x="80" y="600" font-size="13">Sanjay C. · ecogetaway/oss-accessibility-inclusion · rubric 012</text>
+</svg>

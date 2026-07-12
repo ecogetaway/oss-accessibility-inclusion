@@ -31,6 +31,8 @@ Three findings the scores surface — full synthesis in [signals/review-patterns
 2. **The most heavily reviewed PR scored the lowest.** Dozens of comments from two AI review bots, none engaging the accessibility claim. Review volume is not accessibility review.
 3. **Whether a PR gets reviewed at all tracks who opened it** — maintainer self-merges shipped same-day; a contributor's fix waited eleven months for any response.
 
+Optional share graphic for posts/talks: [`docs/images/a11y-scoreboard.svg`](docs/images/a11y-scoreboard.svg).
+
 ### Try this first
 
 | Priority | Action |
