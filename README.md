@@ -12,6 +12,8 @@ This is a companion project to [oss-language-inclusion](https://github.com/ecoge
 
 _Status: six scored case studies, a review rubric, and a draft a11y-signals.yml._
 
+_Built with AI-assisted drafting and research; every factual claim is independently verified against primary sources before publication._
+
 ## The Findings, First
 
 Six real accessibility PRs across Bootstrap, MUI, VS Code, and Storybook, each scored 0–12 against a [six-criterion review rubric](review-rubric.md):
