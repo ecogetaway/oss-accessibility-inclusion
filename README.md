@@ -59,7 +59,7 @@ Please do **not** ask people to star the repo. The useful signal is a template t
 
 ## Why Now
 
-- Accessibility is now a legal requirement in a growing share of the world: the ADA in the US, EN 301 549 in the EU, and the European Accessibility Act (in force since 2025).
+- Accessibility is now a legal requirement in a growing share of the world: the ADA in the US, EN 301 549 in the EU, and the European Accessibility Act (in force since 2019; obligations applying since June 28, 2025).
 - Open source components sit inside products that carry these legal obligations — the accessibility of dependencies is becoming everyone's problem.
 - Roughly one in six people worldwide lives with a significant disability. For them, an inaccessible interface is not degraded; it is unusable.
 - Accessibility PRs in major projects stall for the same structural reasons i18n PRs do: maintainers cannot confidently review work that requires expertise they do not have.
