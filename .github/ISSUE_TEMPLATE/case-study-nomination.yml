@@ -1,0 +1,88 @@
+name: Case study nomination
+description: Suggest a project whose handling of accessibility contributions is worth documenting — good, bad, or instructive.
+title: "[case study] "
+labels: ["a11y", "case-study-candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We are looking for projects that show something clearly. That includes
+        projects doing this well, projects where accessibility work visibly stalls,
+        and projects that changed their approach and left a trail.
+
+        We are **not** looking for projects to criticise. A nomination is not a
+        complaint, and we will not publish anything that reads as one.
+
+        This form asks nothing about you personally.
+
+  - type: input
+    id: repo
+    attributes:
+      label: Project repository
+      placeholder: https://github.com/org/project
+    validations:
+      required: true
+
+  - type: dropdown
+    id: why
+    attributes:
+      label: What makes it instructive?
+      options:
+        - Handles accessibility contributions unusually well
+        - Accessibility contributions consistently stall or go stale
+        - Changed its approach, with a visible before and after
+        - Has review capacity but no way to signal it
+        - Something else (explain below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Specific links
+      description: >
+        Pull requests, issues, review threads, or discussions that show the pattern.
+        Permalinks pinned to a commit SHA are best. Two or three concrete examples
+        are worth more than a general impression — the whole method here is that
+        every claim traces to something a reader can open.
+      placeholder: |
+        - https://github.com/org/project/pull/1234
+        - https://github.com/org/project/issues/5678
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your relationship to the project
+      description: Context only — it does not affect whether we take the nomination.
+      options:
+        - Maintainer
+        - Regular contributor
+        - Contributed once or twice
+        - User
+        - No relationship, just observed it
+        - Prefer not to say
+    validations:
+      required: true
+
+  - type: textarea
+    id: contact
+    attributes:
+      label: Is there a maintainer who would talk to us?
+      description: >
+        Only if that is public information and you think they would welcome it.
+        Please do not share anyone's private contact details, and please do not
+        volunteer someone who has not agreed.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: care
+    attributes:
+      label: Before you submit
+      options:
+        - label: This nomination describes a pattern, not a grievance against a named individual.
+          required: true
+        - label: The links I have given are public.
+          required: true
