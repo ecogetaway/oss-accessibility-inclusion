@@ -59,7 +59,7 @@ Please do **not** ask people to star the repo. The useful signal is a template t
 
 ## Why Now
 
-- Accessibility is now a legal requirement in a growing share of the world: the ADA in the US, EN 301 549 in the EU, and the European Accessibility Act (in force since 2019; obligations applying since June 28, 2025).
+- Accessibility is increasingly a legal requirement. In the EU, Directive (EU) 2016/2102 covers public sector websites and mobile applications, and the European Accessibility Act (Directive (EU) 2019/882, in force since 2019) has applied to a range of consumer products and services since 28 June 2025; conformance with the harmonised standard EN 301 549 (V3.2.1) creates a presumption of conformity with both. In the US, the Department of Justice's 2024 rule under Title II of the ADA requires state and local government web content to meet WCAG 2.1 Level AA, with compliance dates now falling in April 2027 and April 2028 following a one-year extension issued in April 2026; Title III rulemaking for the private sector remains paused, and obligations there continue to be shaped by litigation.
 - Open source components sit inside products that carry these legal obligations — the accessibility of dependencies is becoming everyone's problem.
 - Roughly one in six people worldwide lives with a significant disability. For them, an inaccessible interface is not degraded; it is unusable.
 - Accessibility PRs in major projects stall for the same structural reasons i18n PRs do: maintainers cannot confidently review work that requires expertise they do not have.
@@ -140,64 +140,4 @@ Not yet built: a validator for the signals schema (see [`roadmap.md`](roadmap.md
 1. **Use a template** on a real a11y issue or PR, then open feedback here.
 2. Suggest a recent a11y PR worth studying: issue label `case-study-candidate`.
 3. Share reviewing/contributing experience: label `community-feedback`.
-4. Maintainers: tell us what would make a11y PRs reviewable for you.
-
-Contributors with disabilities are welcome. If an accommodation would help with communication, review format, timing, or how evidence is shared, please say so in any issue.
-
-**A note on language.** This project uses direct, person-centered language ("person with a disability," "screen-reader users") and follows individuals' own preferred terms, whether person-first or identity-first. We avoid euphemisms such as "differently abled," "special needs," or "people of all abilities," which disability-language guides identify as patronizing or obscuring. Case studies describe affected users specifically (for example, "VoiceOver users," "users navigating by keyboard") rather than generically.
-
----
-
-## Repository Structure
-
-    oss-accessibility-inclusion/
-    ├── README.md
-    ├── LICENSE                  (Apache 2.0)
-    ├── ACCESSIBILITY.md
-    ├── CONTRIBUTING.md
-    ├── problem-definition.md
-    ├── roadmap.md
-    ├── review-rubric.md
-    ├── case-studies/
-    ├── signals/
-    └── .github/
-        ├── ISSUE_TEMPLATE/accessibility.yml
-        └── PULL_REQUEST_TEMPLATE/accessibility.md
-
----
-
-## Companion Projects
-
-Three repositories, one method: document how a contribution domain actually fails in real repositories, then build the smallest machine-readable piece of infrastructure the evidence says is missing. Each domain's adoption compounds the others' credibility.
-
-| Domain | Repository | What it builds | Maturity |
-| --- | --- | --- | --- |
-| Internationalization | [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) | Translated-string contribution evidence + `i18n-security-lint` CI tooling | Most developed; method published in CACM Blog and DevOps.com |
-| Accessibility | [oss-accessibility-inclusion](https://github.com/ecogetaway/oss-accessibility-inclusion) | How accessibility PRs are reviewed; review rubric + draft `a11y-signals.yml` | Active |
-| AI contribution | [oss-ai-contribution-policy](https://github.com/ecogetaway/oss-ai-contribution-policy) | Machine-readable `ai-contribution-policy.yml` standard (verification over detection) | Early evidence-gathering |
-
----
-
-## Related Work
-
-This project sits deliberately between guidance repos and evidence repos:
-
-- [intel/AccessibilityPlaybook](https://github.com/intel/AccessibilityPlaybook) — guidance for making open source accessible (playbook; not PR-review research)
-- [a11yproject/a11yproject.com](https://github.com/a11yproject/a11yproject.com) — broad community education
-- [accessibilitysupported/a11ysupport.io](https://github.com/accessibilitysupported/a11ysupport.io) — structured, verified AT support data (a model for evidence discipline)
-- [dequelabs/axe-core](https://github.com/dequelabs/axe-core) — automated testing engine (tooling anchor)
-
-None of these centers what this repository centers: structured case studies of how accessibility contributions are actually reviewed, and the contributor/maintainer infrastructure that evidence points to.
-
----
-
-## Current Status
-
-- Repository established with reusable templates: ACCESSIBILITY.md, issue template, PR template, CONTRIBUTING section.
-- Review rubric v0.1 finalized ([`review-rubric.md`](review-rubric.md)): six criteria, 0–2 points each.
-- Issue and PR templates updated (v0.2) to require WCAG mapping and an explicit AT-verification field, based directly on case-study evidence for what predicts review quality.
-- Six case studies completed and scored across Bootstrap, MUI, VS Code, and Storybook (all 2026 PRs, plus one 2025–2026 stalled PR); scores range 4/12 to 11/12.
-- Cross-case signals synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md): AT-testing evidence (not WCAG citation) predicts review quality; self-merge by a rights-holding maintainer is the default failure mode; automated review volume does not substitute for accessibility review; whether a PR gets reviewed at all appears to depend more on author identity (maintainer vs. outside contributor) than on the accessibility domain itself.
-- `a11y-signals.yml` schema drafted ([`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml)), with two worked examples — a machine-readable accessibility-posture declaration any project can place at its repo root, analogous to CODEOWNERS.
-- Companion project: [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) — same method, applied to internationalization.
-- Licensed under Apache 2.0.
+4.
