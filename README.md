@@ -140,7 +140,7 @@ Not yet built: a validator for the signals schema (see [`roadmap.md`](roadmap.md
 1. **Use a template** on a real a11y issue or PR, then open feedback here.
 2. Suggest a recent a11y PR worth studying: issue label `case-study-candidate`.
 3. Share reviewing/contributing experience: label `community-feedback`.
-4. 4. Maintainers: tell us what would make a11y PRs reviewable for you.
+4. Maintainers: tell us what would make a11y PRs reviewable for you.
 
 Contributors with disabilities are welcome. If an accommodation would help with communication, review format, timing, or how evidence is shared, please say so in any issue.
 
