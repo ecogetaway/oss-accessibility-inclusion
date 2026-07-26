@@ -1,0 +1,84 @@
+name: Accessibility signals adoption report
+description: Tell us your project has added an a11y-signals.yml file, or that you tried and something got in the way.
+title: "[adoption] "
+labels: ["a11y", "community-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for this. Reports of failed or abandoned attempts are as useful to us
+        as successful ones — arguably more so, since they tell us what the schema is
+        getting wrong. Please don't skip the form because it didn't work out.
+
+        This form asks nothing about you personally.
+
+  - type: input
+    id: repo
+    attributes:
+      label: Project repository
+      description: A link is fine.
+      placeholder: https://github.com/org/project
+    validations:
+      required: true
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened?
+      options:
+        - We added the file and it is live
+        - We started and stopped
+        - We decided not to
+        - We want to but something is blocking us
+    validations:
+      required: true
+
+  - type: input
+    id: file_link
+    attributes:
+      label: Link to the file
+      description: If it is live, a permalink pinned to a commit SHA is ideal. Leave blank otherwise.
+      placeholder: https://github.com/org/project/blob/<sha>/a11y-signals.yml
+    validations:
+      required: false
+
+  - type: textarea
+    id: friction
+    attributes:
+      label: What was awkward, unclear, or wrong?
+      description: >
+        Fields you couldn't answer honestly, values that didn't fit, anything the
+        documentation failed to explain, or an internal objection you couldn't
+        answer. Blunt is helpful here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: misread
+    attributes:
+      label: Did anyone read the file as a compliance claim?
+      description: >
+        We are specifically watching for the file being taken as a statement that the
+        software is accessible, rather than a statement about the project's review
+        process. If that came up in review or discussion, we want to know.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: listing
+    attributes:
+      label: May we list this project in our public evidence base?
+      options:
+        - "Yes"
+        - "Yes, but ask me before quoting anything"
+        - "No"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: accuracy
+    attributes:
+      label: Accuracy
+      options:
+        - label: Everything I have stated above is something I can point to a source for, or is clearly marked as my own impression.
+          required: true
