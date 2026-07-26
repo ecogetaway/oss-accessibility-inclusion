@@ -1,0 +1,88 @@
+name: Catalogue correction
+description: Report an error in our evidence files, survey rows, or documentation.
+title: "[correction] "
+labels: ["a11y", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are welcome and are not a nuisance. This project's entire value
+        rests on every claim being traceable to a source, so a wrong row costs us
+        more than a missing one.
+
+        Small ones are worth reporting too — a stale link, a wrong date, a row that
+        says slightly more than its source does.
+
+  - type: input
+    id: location
+    attributes:
+      label: Where is the error?
+      description: File path, and the row or line if you can narrow it.
+      placeholder: evidence/conformance-target-survey.csv, row for org/project
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: What does it currently say?
+      description: Paste the row or sentence as it stands.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of error?
+      options:
+        - Factually wrong
+        - Overstated — the source does not support this much
+        - Out of date — it was right when checked, but has changed since
+        - Link is dead, or points to a branch rather than a commit
+        - Missing a source entirely
+        - Typo or formatting
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say?
+      description: A suggested replacement, if you have one.
+    validations:
+      required: false
+
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: >
+        For legal or standards claims, the official text or issuing body's own page —
+        not a summary article. For repository facts, a permalink pinned to a commit
+        SHA.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: checked
+    attributes:
+      label: Date you checked the source
+      placeholder: 2026-07-26
+    validations:
+      required: true
+
+  - type: dropdown
+    id: substantive
+    attributes:
+      label: Does fixing this require accessibility expertise?
+      description: >
+        If the correction turns on lived experience of assistive technology rather
+        than on checking a source, we will route it for Disability Advisory Council
+        review rather than fixing it ourselves.
+      options:
+        - "No — it is checkable against the source"
+        - "Yes — it involves an accessibility judgement"
+        - "Not sure"
+    validations:
+      required: true
