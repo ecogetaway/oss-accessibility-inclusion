@@ -126,3 +126,61 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
+
+---
+
+## Accessibility and this project
+
+This project asks disabled people to contribute expertise that its maintainers do not
+have. That creates specific obligations beyond the general standards above.
+
+**Ableism is harassment under this code.** In practice, that includes:
+
+- Dismissing a reported barrier as an edge case, a preference, or a niche concern.
+- Treating accessibility work as optional polish rather than function.
+- Using a contributor's disability to question their technical judgement — or to
+  explain their expertise as though it were a consolation.
+- Speaking about disabled people as a category while a disabled person is in the
+  conversation.
+- Framing ordinary participation as inspirational.
+
+**You never have to disclose a disability.** Not to make a request, not to justify an
+accommodation, not to establish standing to comment on accessibility, and not to have
+a report taken seriously. Anyone who asks you to prove a disability, or to explain why
+you need something, is in breach of this code.
+
+**Accommodations are not favours.** If a format, a timing expectation, a tool, or the
+review process itself is a barrier, say so in any issue or by email and we will change
+it. You do not need to give a reason. If our contribution process is inaccessible,
+that is a defect in the process, not a limitation of yours.
+
+**Language.** This project uses direct, person-centered language and follows
+individuals' own preferred terms, whether person-first or identity-first. See the
+language note in the [README](README.md).
+
+## Reporting
+
+Report to **[Sanjay C.]** at **[ecogetaway@gmail.com]**.
+
+If your report concerns that person, or you would simply rather not go to them,
+report to **[Anirudh Raghavendra]** at **[apslwork2025@gmail.com]** instead.
+
+**A limit we should state plainly:** this is a small project. If a report concerns
+both maintainers, we have no internal route that would be fair to you. If that
+happens, we would encourage you to raise it publicly or with a trusted third party,
+and we will not treat doing so as a hostile act. We would rather name this gap than
+imply a process we do not have.
+
+**How to report.** However suits you — email, a direct message, or a private note.
+There is no form and no required format. You do not need to quote this document, cite
+a clause, or write anything up formally. "This happened and it wasn't OK" is a
+complete report.
+
+**What happens next.** We will acknowledge within three working days and respond
+substantively within fourteen. We will tell you what we intend to do before we do it.
+We will not share your identity with the person reported without your agreement — and
+if we ever found ourselves unable to honour that, we would tell you before taking any
+action, not after.
+
+**If we get it wrong.** If you think a report was handled badly, say so. We would
+rather hear it than have you leave quietly.
