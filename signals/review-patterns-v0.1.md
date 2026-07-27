@@ -19,7 +19,7 @@ The two highest-scoring cases (VS Code, MUI) both had a named person or process 
 
 ## Pattern 2 — Self-merge by a maintainer with commit rights is the default failure mode, not adversarial rejection
 
-Neither Bootstrap PR received a single review comment. Both were opened and merged by the same maintainer — #42500 within 14 hours, #42539 within about 36. Storybook #35321 is a third instance of the same shape: the author was a maintainer who merged his own change, with one empty-bodied approval standing as the entire human review.
+Neither Bootstrap PR received a single review comment. Both were opened and merged by the same maintainer — #42500 within 14 hours, #42539 within about 36. Storybook #35321 is a third instance of the same shape: the author was a maintainer who merged their own change, with one empty-bodied approval standing as the entire human review.
 
 This isn't a story about hostile or careless maintainers — the written justifications were good — it's that nothing in the process required a second party to weigh in before an accessibility change shipped. That absence is invisible unless you go looking for it, because the PR still reads as well-documented.
 
