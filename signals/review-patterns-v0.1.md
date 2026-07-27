@@ -19,11 +19,17 @@ The two highest-scoring cases (VS Code, MUI) both had a named person or process 
 
 ## Pattern 2 — Self-merge by a maintainer with commit rights is the default failure mode, not adversarial rejection
 
-Neither Bootstrap PR received a single review comment. Both were opened and merged by the same maintainer, same day. This isn't a story about hostile or careless maintainers — the written justifications were good — it's that nothing in the process required a second party to weigh in before an accessibility change shipped. That absence is invisible unless you go looking for it, because the PR still reads as well-documented.
+Neither Bootstrap PR received a single review comment. Both were opened and merged by the same maintainer — #42500 within 14 hours, #42539 within about 36. Storybook #35321 is a third instance of the same shape: the author was a maintainer who merged his own change, with one empty-bodied approval standing as the entire human review.
 
-## Pattern 3 — Automated review volume is not a substitute for accessibility review
+This isn't a story about hostile or careless maintainers — the written justifications were good — it's that nothing in the process required a second party to weigh in before an accessibility change shipped. That absence is invisible unless you go looking for it, because the PR still reads as well-documented.
 
-The Storybook PR had by far the most review activity of the five — two different AI bots left dozens of comments — none of which touched the actual accessibility claim (correct language announcement for screen readers). All of it was about import conventions and test-file placement. A PR can look heavily reviewed while the one claim that matters for this repo's scope goes completely unverified.
+## Pattern 3 — Code review is not accessibility verification
+
+The Storybook PR had by far the most review activity in the sample: 14 comments, 9 of them from a single automated reviewer. Those 9 were not filler. They caught blank `docs.lang` values that would render as `lang=""` instead of inheriting the project setting, fallback holes where project annotations were not threaded into title and subtitle resolution, an English override wrongly covering caller-supplied content, and `docsLang` dropping on grouped ArgRows. That is substantive review of whether the mechanism works.
+
+What no comment did — bot or human — was establish what a screen reader announces after the fix. The single human review was an approval with an empty body.
+
+The distinction that matters is therefore not volume versus substance; the automated review had both. It is that examining a diff cannot verify an accessibility outcome, because the evidence lives in rendered output plus assistive technology rather than in source. A PR can be genuinely well reviewed and still ship its accessibility claim unverified — and a thread full of substantive-looking comments is a strong social signal of scrutiny, which moves scarce human attention away from the cases most needing it.
 
 ## Pattern 4 — Structured, tagged issue intake produces the best-reviewed PRs
 
@@ -31,9 +37,13 @@ The VS Code case is the outlier specifically because the issue that fed it wasn'
 
 ## Pattern 5 — the "fast review" pattern in v0.1 was a sampling artifact, not a real difference from i18n
 
-The open question in the original v0.1 draft of this document was whether accessibility PRs are reviewed faster than the stalled, silently-closed i18n PRs documented in the companion repo — every v0.1 case study merged same-day or same-week. [Bootstrap #41607](../case-studies/bootstrap-pr41607.md), added to test this, shows the same silent-stall pattern the i18n case studies show: eleven months with zero review, then a closing comment that never evaluates the fix on its merits. The five fast-merging PRs in this sample weren't representative — they were mostly maintainer self-merges of maintainer-authored PRs (Bootstrap #42539, #42500) or PRs that happened to get a specific reviewer's attention (MUI, VS Code). A community contributor's PR, on the same category of bug, in the same repository, waited nearly a year for any response at all. **Whether a PR gets reviewed at all appears to depend more on who opened it — maintainer vs. outside contributor — than on the accessibility domain itself.**
+The open question in the original v0.1 draft of this document was whether accessibility PRs are reviewed faster than the stalled, silently-closed i18n PRs documented in the companion repo — every v0.1 case study merged same-day or same-week. [Bootstrap #41607](../case-studies/bootstrap-pr41607.md), added to test this, shows the same silent-stall pattern the i18n case studies show: eleven months with zero review, then a closing comment that never evaluates the fix on its merits. The five fast-merging PRs in this sample weren't representative — three were maintainer self-merges of maintainer-authored PRs (Bootstrap #42539, #42500, Storybook #35321), and the others happened to get a specific reviewer's attention (MUI, VS Code). A community contributor's PR, on the same category of bug, in the same repository, waited nearly a year for any response at all. **Whether a PR gets reviewed at all appears to depend more on who opened it — maintainer vs. outside contributor — than on the accessibility domain itself.**
 
 ## Open questions for v0.3
 
 - Is the maintainer-vs-contributor gap seen here (Bootstrap #42539/#42500 vs. #41607) consistent across other projects, or specific to how Bootstrap currently triages `accessibility`-labeled PRs?
 - Bootstrap #41607 was closed for architectural reasons (v6's native `<dialog>` obsoleted the code), not because anyone judged the fix wrong. Worth sourcing a case where an a11y PR was closed after actual maintainer disagreement about the fix, to separate "never reviewed" from "reviewed and rejected."
+
+## Verification
+
+All six PRs re-verified against the GitHub API on 2026-07-27. An earlier version of Pattern 3 described two AI reviewers leaving "dozens" of comments concerned only with import conventions and test-file placement; the actual figures are one reviewer and 14 comments, the majority of which engaged substantively with the fix's mechanics. Pattern 3 has been rewritten accordingly, and Pattern 2 extended to include Storybook #35321 as a third self-merge. No scores changed.
