@@ -23,7 +23,7 @@
 
   <text class="mono teal" x="80" y="88" font-size="16" letter-spacing="1.5">OSS ACCESSIBILITY INCLUSION</text>
   <text class="ink" x="80" y="138" font-size="36" font-weight="600">How six a11y PRs actually scored</text>
-  <text class="soft" x="80" y="172" font-size="18">Review volume is not accessibility review. AT evidence predicts quality.</text>
+  <text class="soft" x="80" y="172" font-size="18">Code review is not accessibility verification. AT evidence predicts quality.</text>
 
   <!-- column headers -->
   <text class="mono" x="80" y="230" font-size="13">CASE STUDY</text>
@@ -65,9 +65,9 @@
   <!-- Storybook 4 - callout -->
   <rect class="amberbg" x="72" y="508" width="1040" height="52" rx="6"/>
   <text class="ink" x="88" y="540" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Storybook #35321</text>
-  <text class="amber" x="520" y="540" font-size="16" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Most reviewed · lowest score</text>
+  <text class="amber" x="520" y="540" font-size="16" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Most reviewed Â· lowest score</text>
   <rect class="bar-lo" x="820" y="524" width="80" height="18" rx="3"/>
   <text fill="#EEF1F4" x="850" y="538" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">4</text>
 
-  <text class="mono" x="80" y="600" font-size="13">Sanjay C. · ecogetaway/oss-accessibility-inclusion · rubric 012</text>
+  <text class="mono" x="80" y="600" font-size="13">Sanjay C. Â· ecogetaway/oss-accessibility-inclusion Â· rubric 0â€“12</text>
 </svg>
