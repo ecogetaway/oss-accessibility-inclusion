@@ -10,7 +10,7 @@ This is a companion project to [oss-language-inclusion](https://github.com/ecoge
 
 **Provenance.** Part of the **OSS Infrastructure Initiative** (Sanjay C. and Aniruddh Raghavendra) — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
 
-_Status: six scored case studies, a review rubric, and a draft a11y-signals.yml._
+_Status as of 28 July 2026: six scored case studies, a review rubric, and a draft a11y-signals.yml._
 
 _Built with AI-assisted drafting and research; every factual claim is independently verified against primary sources before publication._
 
@@ -30,7 +30,7 @@ Six real accessibility PRs across Bootstrap, MUI, VS Code, and Storybook, each s
 Three findings the scores surface — full synthesis in [signals/review-patterns-v0.1.md](signals/review-patterns-v0.1.md):
 
 1. **Assistive-technology testing evidence — not WCAG citation — predicts review quality.** A PR that cited WCAG criteria by number still shipped same-day with zero reviewers; the top scorers both had someone actually verify with AT.
-2. **The most heavily reviewed PR scored the lowest.** Dozens of comments from two AI review bots, none engaging the accessibility claim. Review volume is not accessibility review.
+2. **The most heavily reviewed PR still scored the lowest.** Storybook #35321 drew the most review activity in the sample — 14 comments, 9 of them from a single automated reviewer that caught real defects in how the fix propagated. Nobody verified the outcome with a screen reader. Code review is not accessibility verification.
 3. **Whether a PR gets reviewed at all tracks who opened it** — maintainer self-merges shipped same-day; a contributor's fix waited eleven months for any response.
 
 Optional share graphic for posts/talks: [`docs/images/a11y-scoreboard.svg`](docs/images/a11y-scoreboard.svg).
@@ -197,7 +197,8 @@ None of these centers what this repository centers: structured case studies of h
 - Review rubric v0.1 finalized ([`review-rubric.md`](review-rubric.md)): six criteria, 0–2 points each.
 - Issue and PR templates updated (v0.2) to require WCAG mapping and an explicit AT-verification field, based directly on case-study evidence for what predicts review quality.
 - Six case studies completed and scored across Bootstrap, MUI, VS Code, and Storybook (all 2026 PRs, plus one 2025–2026 stalled PR); scores range 4/12 to 11/12.
-- Cross-case signals synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md): AT-testing evidence (not WCAG citation) predicts review quality; self-merge by a rights-holding maintainer is the default failure mode; automated review volume does not substitute for accessibility review; whether a PR gets reviewed at all appears to depend more on author identity (maintainer vs. outside contributor) than on the accessibility domain itself.
+- Cross-case signals synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md): AT-testing evidence (not WCAG citation) predicts review quality; self-merge by a rights-holding maintainer is the default failure mode; substantive code review does not substitute for assistive-technology verification; whether a PR gets reviewed at all appears to depend more on author identity (maintainer vs. outside contributor) than on the accessibility domain itself.
+- - All six PRs re-verified against the GitHub API on 2026-07-27; two findings were corrected against the primary source. Verification notes are recorded in the affected case study and in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md).
 - `a11y-signals.yml` schema drafted ([`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml)), with two worked examples — a machine-readable accessibility-posture declaration any project can place at its repo root, analogous to CODEOWNERS.
 - Companion project: [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) — same method, applied to internationalization.
 - Licensed under Apache 2.0.
