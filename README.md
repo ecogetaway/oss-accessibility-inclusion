@@ -10,28 +10,32 @@ This is a companion project to [oss-language-inclusion](https://github.com/ecoge
 
 **Provenance.** Part of the **OSS Infrastructure Initiative** (Sanjay C. and Aniruddh Raghavendra) — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
 
-_Status as of 28 July 2026: six scored case studies, a review rubric, and a draft a11y-signals.yml._
+_Status as of 29 July 2026: seven scored case studies, a review rubric, and a draft a11y-signals.yml. All seven re-verified against their live GitHub pages on 29 July; four scores changed and one cross-case pattern was inverted._
 
 _Built with AI-assisted drafting and research; every factual claim is independently verified against primary sources before publication._
 
 ## The Findings, First
 
-Six real accessibility PRs across Bootstrap, MUI, VS Code, and Storybook, each scored 0–12 against a [six-criterion review rubric](review-rubric.md):
+Seven real accessibility PRs across Bootstrap, MUI, VS Code, and Storybook, each scored 0–12 against a [six-criterion review rubric](review-rubric.md):
 
 | Case study | Category | Score |
 | --- | --- | --- |
-| [VS Code #324192](case-studies/vscode-pr324192.md) | Contrast / theming | **11/12** |
-| [MUI #48572](case-studies/mui-material-ui-pr48572.md) | AT-specific behavior | **10/12** |
+| [MUI #48572](case-studies/mui-material-ui-pr48572.md) | AT-specific behavior | **9/12** |
+| [VS Code #324192](case-studies/vscode-pr324192.md) | Contrast / theming | **8/12** |
+| [Bootstrap #42524](case-studies/bootstrap-pr42524.md) | Follow-up defect after an unreviewed merge | 7/12 |
 | [Bootstrap #42539](case-studies/bootstrap-pr42539.md) | Semantics / reading order | 6/12 |
 | [Bootstrap #42500](case-studies/bootstrap-pr42500.md) | Complex widget interaction | 6/12 |
 | [Bootstrap #41607](case-studies/bootstrap-pr41607.md) | Stalled 11 months, closed unmerged | 4/12 |
 | [Storybook #35321](case-studies/storybook-pr35321.md) | Accessibility × i18n | 4/12 |
 
-Three findings the scores surface — full synthesis in [signals/review-patterns-v0.1.md](signals/review-patterns-v0.1.md):
+No case reaches the 10–12 band the rubric describes as normal for an accessibility-mature project. The range is 4 to 9, across four of the best-resourced front-end projects in open source.
 
-1. **Assistive-technology testing evidence — not WCAG citation — predicts review quality.** A PR that cited WCAG criteria by number still shipped same-day with zero reviewers; the top scorers both had someone actually verify with AT.
-2. **The most heavily reviewed PR still scored the lowest.** Storybook #35321 drew the most review activity in the sample — 14 comments, 9 of them from a single automated reviewer that caught real defects in how the fix propagated. Nobody verified the outcome with a screen reader. Code review is not accessibility verification.
-3. **Whether a PR gets reviewed at all tracks who opened it** — maintainer self-merges shipped same-day; a contributor's fix waited eleven months for any response.
+Four findings the scores surface — full synthesis in [signals/review-patterns-v0.2.md](signals/review-patterns-v0.2.md):
+
+1. **Verification evidence — not WCAG citation — predicts review quality.** The PR with the best standards work in the corpus, reasoning about two success criteria and anchoring four, scored 6/12 and shipped interaction defects within a week. The PR citing no criterion at all scored 9/12, because a reviewer opened it with VoiceOver first.
+2. **The most heavily reviewed PR still scored the lowest.** Storybook #35321 drew nine actionable comments across three automated reviews, finding four genuine defects in how the fix propagated. Nobody established what a screen reader announces afterwards. Code review is not accessibility verification.
+3. **Whether a PR gets reviewed at all tracks who opened it.** Six of the six merged PRs were merged by their own author; the one outside contributor's fix was labelled `accessibility` within hours and then waited eleven months for any response before being closed unread.
+4. **A control written as prose is not a gate.** The best-specified issue in the corpus carried an explicit rule that only an accessibility tester could close it after verification. It was closed as completed by someone else, and the `verified` label arrived a week later with no measured result attached.
 
 Optional share graphic for posts/talks: [`docs/images/a11y-scoreboard.svg`](docs/images/a11y-scoreboard.svg).
 
@@ -110,14 +114,15 @@ Each case study records the contribution, the review pattern observed, and the i
 | --- | --- | --- |
 | Bootstrap | [#42539](https://github.com/twbs/bootstrap/pull/42539) — floating labels before control for screen readers | Semantics / reading order |
 | Bootstrap | [#42500](https://github.com/twbs/bootstrap/pull/42500) — accessible OTP input rework | Complex widget interaction |
+| Bootstrap | [#42524](https://github.com/twbs/bootstrap/pull/42524) — OTP click-to-focus and overwrite fixes after #42500 shipped defects | Complex widget interaction (follow-up) |
 | MUI Material UI | [#48572](https://github.com/mui/material-ui/pull/48572) — autocomplete focus fix for VoiceOver | AT-specific behavior |
 | VS Code | [#324192](https://github.com/microsoft/vscode/pull/324192) — warning icon colors, 2026 Light theme | Contrast / theming |
 | Storybook | [#35321](https://github.com/storybookjs/storybook/pull/35321) — lang attribute handling in preview | Accessibility × i18n intersection |
 | Bootstrap | [#41607](https://github.com/twbs/bootstrap/pull/41607) — modal focus-trap fix, closed unmerged after 11 months | Complex widget interaction (stalled) |
 
-Full write-ups: [Bootstrap #42539](case-studies/bootstrap-pr42539.md) · [Bootstrap #42500](case-studies/bootstrap-pr42500.md) · [MUI #48572](case-studies/mui-material-ui-pr48572.md) · [VS Code #324192](case-studies/vscode-pr324192.md) · [Storybook #35321](case-studies/storybook-pr35321.md) · [Bootstrap #41607](case-studies/bootstrap-pr41607.md).
+Full write-ups: [Bootstrap #42539](case-studies/bootstrap-pr42539.md) · [Bootstrap #42500](case-studies/bootstrap-pr42500.md) · [Bootstrap #42524](case-studies/bootstrap-pr42524.md) · [MUI #48572](case-studies/mui-material-ui-pr48572.md) · [VS Code #324192](case-studies/vscode-pr324192.md) · [Storybook #35321](case-studies/storybook-pr35321.md) · [Bootstrap #41607](case-studies/bootstrap-pr41607.md).
 
-Case study write-ups live in [`case-studies/`](case-studies/). The scoring checklist lives in [`review-rubric.md`](review-rubric.md). Cross-case patterns are synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md).
+Case study write-ups live in [`case-studies/`](case-studies/). The scoring checklist lives in [`review-rubric.md`](review-rubric.md). Cross-case patterns are synthesized in [`signals/review-patterns-v0.2.md`](signals/review-patterns-v0.2.md).
 
 ---
 
@@ -196,9 +201,9 @@ None of these centers what this repository centers: structured case studies of h
 - Repository established with reusable templates: ACCESSIBILITY.md, issue template, PR template, CONTRIBUTING section.
 - Review rubric v0.1 finalized ([`review-rubric.md`](review-rubric.md)): six criteria, 0–2 points each.
 - Issue and PR templates updated (v0.2) to require WCAG mapping and an explicit AT-verification field, based directly on case-study evidence for what predicts review quality.
-- Six case studies completed and scored across Bootstrap, MUI, VS Code, and Storybook (all 2026 PRs, plus one 2025–2026 stalled PR); scores range 4/12 to 11/12.
-- Cross-case signals synthesized in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md): AT-testing evidence (not WCAG citation) predicts review quality; self-merge by a rights-holding maintainer is the default failure mode; substantive code review does not substitute for assistive-technology verification; whether a PR gets reviewed at all appears to depend more on author identity (maintainer vs. outside contributor) than on the accessibility domain itself.
-- - All six PRs re-verified against the GitHub API on 2026-07-27; two findings were corrected against the primary source. Verification notes are recorded in the affected case study and in [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md).
+- Seven case studies completed and scored across Bootstrap, MUI, VS Code, and Storybook (all 2026 PRs, plus one 2025–2026 stalled PR); scores range 4/12 to 9/12.
+- Cross-case signals synthesized in [`signals/review-patterns-v0.2.md`](signals/review-patterns-v0.2.md): verification evidence (not WCAG citation) predicts review quality; self-merge is the norm rather than the exception, at six of six merged PRs; substantive code review does not substitute for assistive-technology verification; a process control written as prose in an issue body is not enforced and gets bypassed; code-owner team review requests went unanswered in five of five cases; and whether a PR gets reviewed at all appears to depend more on author identity than on the accessibility domain itself.
+- All seven PRs and their linked issues re-verified twice: against the GitHub API on 2026-07-27, and against live GitHub pages on 2026-07-29. Four scores changed, one cross-case pattern was inverted, and criterion 3 of the rubric was rebuilt with explicit bands after the corpus showed it being applied inconsistently. Every change is recorded in the affected case study's Verification section and in [`signals/review-patterns-v0.2.md`](signals/review-patterns-v0.2.md).
 - `a11y-signals.yml` schema drafted ([`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml)), with two worked examples — a machine-readable accessibility-posture declaration any project can place at its repo root, analogous to CODEOWNERS.
 - Companion project: [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion) — same method, applied to internationalization.
 - Licensed under Apache 2.0.

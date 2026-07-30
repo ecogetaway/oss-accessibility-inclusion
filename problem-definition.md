@@ -4,7 +4,7 @@ Open source has standardized infrastructure for code contribution — linters, C
 
 ## The core claim
 
-Code contribution depends on shared, repeatable process. Accessibility contribution depends on local process, individual goodwill, and whichever maintainer happens to have assistive-technology (AT) experience — which most don't. That dependency produces the same failure shape repeatedly: correct fixes that ship on the author's word alone, or well-reviewed PRs where the review never touches the accessibility claim itself. See [`signals/review-patterns-v0.1.md`](signals/review-patterns-v0.1.md) for evidence.
+Code contribution depends on shared, repeatable process. Accessibility contribution depends on local process, individual goodwill, and whichever maintainer happens to have assistive-technology (AT) experience — which most don't. That dependency produces the same failure shape repeatedly: correct fixes that ship on the author's word alone, or well-reviewed PRs where the review never touches the accessibility claim itself. See [`signals/review-patterns-v0.2.md`](signals/review-patterns-v0.2.md) for evidence.
 
 ## The five-part gap
 

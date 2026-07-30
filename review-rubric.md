@@ -16,8 +16,18 @@ Does the PR description or discussion name the affected users and the task they 
 ### 2. WCAG mapping
 Is the change tied to a specific WCAG success criterion (e.g. 1.3.1 Info and Relationships, 4.1.2 Name Role Value) by the author, a reviewer, or the linked issue — anywhere in the thread?
 
-### 3. AT testing evidence
-Is there a record of testing with actual assistive technology — which AT, which version/OS, and what was observed — either before or after the fix?
+### 3. Verification evidence
+Is there a record of the fix being verified against real assistive technology or a real device — which AT or platform, which version/OS, and what was observed — either before or after the fix?
+
+Scored in bands, because the corpus showed this criterion being applied inconsistently:
+
+| Score | Meaning |
+| --- | --- |
+| 0 | No verification recorded. Automated unit tests do not count — they verify the mechanism, not the outcome. |
+| 1 | An AT or platform is named, but at least one of version/OS or observed result is missing; or the evidence predates the fix and was never repeated afterwards. |
+| 2 | Named AT or platform, plus version/OS, plus what was observed — recorded by a second party, before merge. |
+
+Note on scope: v0.1 of this criterion said "assistive technology" only. Platform verification on real hardware (for example, confirming an on-screen keyboard behaves correctly on a named iPadOS build) meets every structural property the criterion is testing for, and is scored here on the same bands. See [Bootstrap #42524](case-studies/bootstrap-pr42524.md) for the case that forced this change.
 
 ### 4. Reviewer confidence signal
 Did a reviewer engage substantively with the accessibility claim (e.g. verified the fix, asked a probing question, cited a spec) as opposed to a rubber-stamp approval or a self-merge with no review at all?

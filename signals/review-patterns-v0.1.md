@@ -1,49 +1,11 @@
-# Signals v0.1 — Patterns Across the First Six Case Studies
+# Signals v0.1 — superseded
 
-Synthesized from six case studies scored against [`review-rubric.md`](../review-rubric.md). Five were added in v0.1 (all merged, all fast); a sixth — a stalled, closed-unmerged PR — was added in v0.2 specifically to test the open question v0.1 raised (see below).
+This document has been superseded by [`review-patterns-v0.2.md`](review-patterns-v0.2.md), which covers seven case studies instead of six and reflects the full re-verification carried out on 2026-07-29.
 
-## Scores at a glance
+Three things changed materially, and are recorded here so the revision history stays legible rather than silently rewritten:
 
-| Case study | Category | Score |
-| --- | --- | --- |
-| [VS Code #324192](../case-studies/vscode-pr324192.md) | Contrast / theming | 11/12 |
-| [MUI #48572](../case-studies/mui-material-ui-pr48572.md) | AT-specific behavior | 10/12 |
-| [Bootstrap #42539](../case-studies/bootstrap-pr42539.md) | Semantics / reading order | 6/12 |
-| [Bootstrap #42500](../case-studies/bootstrap-pr42500.md) | Complex widget interaction | 6/12 |
-| [Bootstrap #41607](../case-studies/bootstrap-pr41607.md) | Complex widget interaction (stalled) | 4/12 |
-| [Storybook #35321](../case-studies/storybook-pr35321.md) | Accessibility × i18n intersection | 4/12 |
+- **Pattern 4 was inverted.** v0.1 credited VS Code #324192 with a decisive process control — a rule that only an accessibility tester could close the issue after verification. The rule exists, and it was bypassed: the issue was closed as completed by a different person, and verification arrived a week later with no measured result. The replacement pattern is that a control written as prose is not a gate.
+- **Pattern 2 was much larger than v0.1 recorded.** Three self-merges became six of six merged PRs.
+- **Two scores fell.** VS Code #324192 from 11/12 to 8/12 and MUI #48572 from 10/12 to 9/12, after criterion 3 was given explicit bands. A seventh case, Bootstrap #42524, was added at 7/12.
 
-## Pattern 1 — AT-testing evidence is the criterion that separates high and low scores, not WCAG citation
-
-The two highest-scoring cases (VS Code, MUI) both had a named person or process actually verify the fix against real assistive technology (VoiceOver, or a dedicated accessibility-test role) before merge. The two Bootstrap cases had strong written reasoning — one even cited four WCAG success criteria — but no recorded AT verification, and scored the same as a result. WCAG mapping alone does not predict review quality; independently confirmed AT testing does.
-
-## Pattern 2 — Self-merge by a maintainer with commit rights is the default failure mode, not adversarial rejection
-
-Neither Bootstrap PR received a single review comment. Both were opened and merged by the same maintainer — #42500 within 14 hours, #42539 within about 36. Storybook #35321 is a third instance of the same shape: the author was a maintainer who merged their own change, with one empty-bodied approval standing as the entire human review.
-
-This isn't a story about hostile or careless maintainers — the written justifications were good — it's that nothing in the process required a second party to weigh in before an accessibility change shipped. That absence is invisible unless you go looking for it, because the PR still reads as well-documented.
-
-## Pattern 3 — Code review is not accessibility verification
-
-The Storybook PR had by far the most review activity in the sample: 14 comments, 9 of them from a single automated reviewer. Those 9 were not filler. They caught blank `docs.lang` values that would render as `lang=""` instead of inheriting the project setting, fallback holes where project annotations were not threaded into title and subtitle resolution, an English override wrongly covering caller-supplied content, and `docsLang` dropping on grouped ArgRows. That is substantive review of whether the mechanism works.
-
-What no comment did — bot or human — was establish what a screen reader announces after the fix. The single human review was an approval with an empty body.
-
-The distinction that matters is therefore not volume versus substance; the automated review had both. It is that examining a diff cannot verify an accessibility outcome, because the evidence lives in rendered output plus assistive technology rather than in source. A PR can be genuinely well reviewed and still ship its accessibility claim unverified — and a thread full of substantive-looking comments is a strong social signal of scrutiny, which moves scarce human attention away from the cases most needing it.
-
-## Pattern 4 — Structured, tagged issue intake produces the best-reviewed PRs
-
-The VS Code case is the outlier specifically because the issue that fed it wasn't a community bug report — it came from a named internal accessibility-testing role, tagged with the exact WCAG criterion and a rule that only a verified tester could close it. The PR review itself was almost a formality; the rigor happened at issue-filing time. This suggests the highest-leverage intervention for other projects isn't a better PR template, but a better *issue* template that captures WCAG mapping and AT evidence before a PR ever opens.
-
-## Pattern 5 — the "fast review" pattern in v0.1 was a sampling artifact, not a real difference from i18n
-
-The open question in the original v0.1 draft of this document was whether accessibility PRs are reviewed faster than the stalled, silently-closed i18n PRs documented in the companion repo — every v0.1 case study merged same-day or same-week. [Bootstrap #41607](../case-studies/bootstrap-pr41607.md), added to test this, shows the same silent-stall pattern the i18n case studies show: eleven months with zero review, then a closing comment that never evaluates the fix on its merits. The five fast-merging PRs in this sample weren't representative — three were maintainer self-merges of maintainer-authored PRs (Bootstrap #42539, #42500, Storybook #35321), and the others happened to get a specific reviewer's attention (MUI, VS Code). A community contributor's PR, on the same category of bug, in the same repository, waited nearly a year for any response at all. **Whether a PR gets reviewed at all appears to depend more on who opened it — maintainer vs. outside contributor — than on the accessibility domain itself.**
-
-## Open questions for v0.3
-
-- Is the maintainer-vs-contributor gap seen here (Bootstrap #42539/#42500 vs. #41607) consistent across other projects, or specific to how Bootstrap currently triages `accessibility`-labeled PRs?
-- Bootstrap #41607 was closed for architectural reasons (v6's native `<dialog>` obsoleted the code), not because anyone judged the fix wrong. Worth sourcing a case where an a11y PR was closed after actual maintainer disagreement about the fix, to separate "never reviewed" from "reviewed and rejected."
-
-## Verification
-
-All six PRs re-verified against the GitHub API on 2026-07-27. An earlier version of Pattern 3 described two AI reviewers leaving "dozens" of comments concerned only with import conventions and test-file placement; the actual figures are one reviewer and 14 comments, the majority of which engaged substantively with the fix's mechanics. Pattern 3 has been rewritten accordingly, and Pattern 2 extended to include Storybook #35321 as a third self-merge. No scores changed.
+The superseded text is preserved in this file's git history.

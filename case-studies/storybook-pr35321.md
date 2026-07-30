@@ -17,7 +17,7 @@ Storybook always rendered `<html lang="en">` regardless of the actual language o
 - PR opened: 2026-06-29
 - PR merged: 2026-06-30
 - Days open: 1
-- Authored and merged by the same maintainer (Sidnioulz), ahead of a stated feature freeze
+- Authored and merged by the same person (Sidnioulz), who holds write access; shipped in the 10.5.0 release line
 
 ## Rubric Scores
 
@@ -32,15 +32,24 @@ Storybook always rendered `<html lang="en">` regardless of the actual language o
 | **Total** | **4/12** | |
 
 ## Review Pattern Observed
-Substantive automated review of the mechanism; no verification of the outcome. An AI reviewer caught four real defects in how the language value propagates. A single human approval carried no comment body. The author, a maintainer, merged their own change ahead of a feature freeze. "The code was reviewed" and "the accessibility claim was verified" are two different things here, and only the first happened.
+Substantive automated review of the mechanism; no verification of the outcome. An AI reviewer caught four real defects in how the language value propagates. A single human approval carried no comment body. The author, who holds write access, merged their own change and then applied the `qa:success` label to it themselves. "The code was reviewed" and "the accessibility claim was verified" are two different things here, and only the first happened.
 
 ## Infrastructure Gap Illustrated
 This case shows that code review is not accessibility verification. An automated reviewer can examine the mechanism carefully — and did — while the claim that actually matters, that AT will now announce the right language, goes unchecked, because verifying it requires rendering the page and listening rather than reading a diff. A required "AT verified: yes/no, which AT, which version and browser, what was observed" field, distinct from general code review, would have surfaced that gap before merge.
 
-Note also that this is the third case in the sample where the merging maintainer was also the author — see Pattern 2 in [`signals/review-patterns-v0.1.md`](../signals/review-patterns-v0.1.md).
+Note also that this is the third case in the sample where the merging maintainer was also the author — see Pattern 2 in [`signals/review-patterns-v0.2.md`](../signals/review-patterns-v0.2.md).
 
 ## Verification
-Comment counts, reviewer identities and merge details re-verified against the GitHub API on 2026-07-27. An earlier version of this case study described two AI reviewers and characterised the bot comments as concerning only import conventions and test-file placement; both were inaccurate and have been corrected. The score is unchanged.
+Re-verified twice. Against the GitHub API on 2026-07-27: an earlier version described two AI reviewers and characterised the bot comments as concerning only import conventions and test-file placement; both were inaccurate and were corrected.
+
+Re-verified again against the live PR page on 2026-07-29, which showed the corrected version was still not exact. Score unchanged at 4/12. Findings:
+
+- **Comment counts.** The page's conversation counter reads 17. CodeRabbit posted three separate reviews, with seven, one and one actionable comments respectively, plus five nitpicks. The figure "9 of 12 inline comments" conflated actionable comments with a total; the defensible statement is that a single automated reviewer posted nine actionable comments across three reviews and found four genuine defects in how the language value propagates.
+- **"Ahead of a feature freeze" is unsourced.** It appears nowhere on the PR page and has been removed pending a source.
+- **"Maintainer" overstated.** The author's badge reads Contributor, not Member. They self-assign, apply labels, move project-board cards and merge — so they hold write access — but the page contradicts the word "maintainer" on its face.
+- **Code-owner reviews were requested from two people** (jonniebigodes, kylegach) and neither reviewed. The lone approval came from a third person and carried no comment body.
+- **The author self-certified QA**, flipping `qa:needed` to `qa:success` on their own merged change. This is the cleanest single illustration in the corpus of a process with no independent checkpoint.
+- **It shipped.** Merged to `next`, referenced by the 10.5.0-alpha.10 prerelease and consumed downstream at storybook 10.5.0 — unlike all three Bootstrap cases.
 
 ## Source
 [github.com/storybookjs/storybook/pull/35321](https://github.com/storybookjs/storybook/pull/35321)
