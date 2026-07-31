@@ -72,7 +72,7 @@ One case, so this is a hypothesis rather than a finding. But it is a cheap and t
 
 ## Pattern 7 — Merging is not shipping
 
-All three Bootstrap cases leave users of every released version with nothing. #42539 and #42500 merged only into the unreleased `v6-dev` branch; #41607 targeted `main` and was closed precisely because `v6-dev` supersedes it. The reporter of the floating-label defect filed against v5.3.3 and, roughly fourteen and a half months later, still has the bug — while the issue is closed as *completed*.
+All four Bootstrap cases leave users of every released version with nothing. #42500, #42539 and #42524 merged only into the unreleased `v6-dev` branch; #41607 targeted `main` and was closed precisely because `v6-dev` supersedes it. The reporter of the floating-label defect filed against v5.3.3 and, roughly fourteen and a half months later, still has the bug — while the issue is closed as *completed*.
 
 Storybook, MUI and VS Code all shipped. So the pattern is project-specific rather than universal, which is why it belongs here rather than in the headline findings. But it changes what "merged" means as an outcome measure, and it means a rubric that stops at the merge event overstates how many of these defects were actually fixed for anybody.
 
@@ -90,3 +90,5 @@ All seven PRs and their linked issues re-verified against live GitHub pages on 2
 Score changes: VS Code #324192 from 11/12 to 8/12; MUI #48572 from 10/12 to 9/12; Bootstrap #42524 added at 7/12. Rubric change: criterion 3 was renamed *Verification evidence* and given explicit bands, after #42524 exposed that it scored device verification below weaker AT evidence.
 
 Pattern changes: Pattern 4 was inverted — the closure rule it credited turned out to have been bypassed. Pattern 2 was extended from three self-merges to six of six. Pattern 3's comment counts were restated (nine actionable comments across three automated reviews, not "9 of 12 inline"), and an unsourced claim that the Storybook PR merged ahead of a feature freeze was removed. Patterns 6 and 7 are new.
+
+Corrected 2026-07-31: Pattern 7 said three Bootstrap cases; #42524 also merged into `v6-dev`, making it four. Confirmed via the GitHub API.
