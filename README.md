@@ -1,8 +1,8 @@
+# Open Source Accessibility Inclusion
+
 Open source has standardized infrastructure for code contribution, but no equivalent infrastructure for accessibility contribution.
 
 This repository investigates whether accessibility inclusion is a missing infrastructure layer in open source — and documents how accessibility pull requests are actually reviewed in practice.
-
-# Open Source Accessibility Inclusion
 
 **Early evidence suggests** a recurring pattern: code contribution has mature shared workflows, while accessibility contribution depends on local process, individual goodwill, and maintainer capacity that often does not include accessibility expertise.
 
@@ -11,6 +11,8 @@ This is a companion project to [oss-language-inclusion](https://github.com/ecoge
 **Provenance.** Part of the **OSS Infrastructure Initiative** (Sanjay C. and Aniruddh Raghavendra) — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
 
 _Status as of 29 July 2026: seven scored case studies, a review rubric, and a draft a11y-signals.yml. All seven re-verified against their live GitHub pages on 29 July; four scores changed and one cross-case pattern was inverted._
+
+**New here?** Start with [The Seven PRs, Explained](seven-prs-explained.md) — a five-minute plain-language walkthrough of what we found and why it matters.
 
 _Built with AI-assisted drafting and research; every factual claim is independently verified against primary sources before publication._
 
