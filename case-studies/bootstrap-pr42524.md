@@ -10,18 +10,18 @@
 Complex widget interaction
 
 ## What Happened
-This is the direct sequel to [#42500](bootstrap-pr42500.md), and it exists because that PR was merged unreviewed. The single-input OTP rewrite shipped two interaction defects that, in the author's own words, were "reported after merge": clicking a slot did not focus it (the slots carried `pointer-events: none` and focus always jumped to the end of the value), and retyping a digit shifted the remaining digits along, because a native `<input>` inserts rather than overwrites. This PR reworked the interaction model to map the active slot to a selection range and intercept single-character input, while keeping the single accessible `<input>` that #42500 introduced.
+This is the direct sequel to [#42500](bootstrap-pr42500.md), and it exists because that PR was merged unreviewed. The single-input OTP rewrite merged with two interaction defects that, in the author's own words, were "reported after merge": clicking a slot did not focus it (the slots carried `pointer-events: none` and focus always jumped to the end of the value), and retyping a digit shifted the remaining digits along, because a native `<input>` inserts rather than overwrites. This PR reworked the interaction model to map the active slot to a selection range and intercept single-character input, while keeping the single accessible `<input>` that #42500 introduced. Both interaction fixes are covered by new unit tests added in the PR's final commit.
 
 The fix then introduced a defect of its own. An outside contributor (coliff) tested the deploy preview on iPadOS 26 and iPadOS 27 Developer Beta and found that tapping the field raised the on-screen keyboard and dismissed it within a split second — a functional lockout on touch devices, in a component whose stated purpose was accessibility. The cause, as the author explained in the thread, was that the decorative slots overlaid the real input with `pointer-events: none`, so the component called `input.focus()` programmatically after calling `preventDefault()` on the tap; iOS will only raise the on-screen keyboard in response to a genuine, un-prevented gesture on the input itself. The author pushed a fix restoring `pointer-events: auto`, asked the reporter to re-test because he had no iPadOS device, and the reporter confirmed the following day that it worked.
 
 ## Timeline
-- Parent PR #42500 merged (unreviewed, same-day): 2026-06-11
+- Parent PR #42500 merged (unreviewed, in 13h 35m): 2026-06-11
 - PR opened: 2026-06-18
 - Regression on iPadOS 26/27 reported by an outside contributor: 2026-06-24
 - Author pushed a fix and requested re-testing on hardware he lacked: 2026-06-28
 - Reporter confirmed the fix on both iPadOS versions: 2026-06-29
-- PR merged: 2026-06-29 or later (archived view shows relative dating only)
-- Days open: 11+
+- PR merged: 2026-07-04
+- Days open: 16
 
 ## Rubric Scores
 
@@ -49,7 +49,7 @@ As first drafted, this PR scored 6/12, the same total as #42500 and #42539, desp
 Scoring the behaviour we advocate identically to the behaviour we criticise is a defect in the rubric, not a finding about the project. Criterion 3 was therefore renamed *Verification evidence* and given explicit bands on 2026-07-29, with platform verification scored on the same scale. This case moves to 2 and a total of 7/12; [MUI #48572](mui-material-ui-pr48572.md) moves down from 2 to 1 under the same bands, because nine words naming an AT with no version and no observed result is weaker evidence than what an outside contributor supplied here. Feeds issue #11 (validate the review rubric) and the AT test matrix work in #13.
 
 ## Verification
-Written 2026-07-29 from the live PR page. Merge date recorded as a lower bound because the archived view showed relative dating ("last month") rather than an absolute date; worth pinning against the GitHub API before this case study is cited externally.
+Re-verified 2026-08-04 against the GitHub API. Merged commit `b6a3341` into `v6-dev` on **2026-07-04**, sixteen days after opening — the earlier "2026-06-29 or later, archived view shows relative dating only" is superseded by this exact figure. The verbatim quote in Infrastructure Gap Illustrated is confirmed word for word against the live page. The Laravel-starter-kit and CoreUI counter-evidence in the placeholder discussion is confirmed as written.
 
 ## Source
 [github.com/twbs/bootstrap/pull/42524](https://github.com/twbs/bootstrap/pull/42524)
