@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
   <title id="title">Accessibility PR review scoreboard</title>
-  <desc id="desc">Seven scored accessibility pull requests. MUI 9 of 12, VS Code 8 of 12, one Bootstrap PR at 7 of 12, two Bootstrap PRs at 6 of 12, and a stalled Bootstrap PR and Storybook at 4 of 12. Finding: no case reaches the mature-process band, and the most heavily reviewed PR scored lowest.</desc>
+  <desc id="desc">Seven scored accessibility pull requests. MUI 9 of 12, VS Code 8 of 12, two Bootstrap PRs at 7 of 12, one Bootstrap PR at 6 of 12, and a stalled Bootstrap PR and Storybook at 4 of 12. Finding: no case reaches the mature-process band, and the most heavily reviewed PR scored among the lowest.</desc>
   <defs>
     <style>
       .bg { fill: #EEF1F4; }
@@ -42,18 +42,18 @@
   <rect class="bar-hi" x="820" y="310" width="160" height="18" rx="3"/>
   <text fill="#EEF1F4" x="890" y="324" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">8</text>
 
-  <text class="ink" x="80" y="370" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42524</text>
-  <text class="soft" x="520" y="370" font-size="16">Defects after unreviewed merge</text>
+  <text class="ink" x="80" y="370" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42500</text>
+  <text class="soft" x="520" y="370" font-size="16">Complex widget interaction</text>
   <rect class="bar-mid" x="820" y="354" width="140" height="18" rx="3"/>
   <text fill="#EEF1F4" x="880" y="368" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">7</text>
 
-  <text class="ink" x="80" y="414" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42539</text>
-  <text class="soft" x="520" y="414" font-size="16">Semantics / reading order</text>
-  <rect class="bar-mid" x="820" y="398" width="120" height="18" rx="3"/>
-  <text fill="#EEF1F4" x="870" y="412" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">6</text>
+  <text class="ink" x="80" y="414" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42524</text>
+  <text class="soft" x="520" y="414" font-size="16">Defects after unreviewed merge</text>
+  <rect class="bar-mid" x="820" y="398" width="140" height="18" rx="3"/>
+  <text fill="#EEF1F4" x="880" y="412" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">7</text>
 
-  <text class="ink" x="80" y="458" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42500</text>
-  <text class="soft" x="520" y="458" font-size="16">Complex widget interaction</text>
+  <text class="ink" x="80" y="458" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Bootstrap #42539</text>
+  <text class="soft" x="520" y="458" font-size="16">Semantics / reading order</text>
   <rect class="bar-mid" x="820" y="442" width="120" height="18" rx="3"/>
   <text fill="#EEF1F4" x="870" y="456" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">6</text>
 
@@ -64,9 +64,9 @@
 
   <rect class="amberbg" x="72" y="522" width="1040" height="52" rx="6"/>
   <text class="ink" x="88" y="554" font-size="20" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Storybook #35321</text>
-  <text class="amber" x="520" y="554" font-size="16" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Most reviewed · lowest score</text>
+  <text class="amber" x="520" y="554" font-size="16" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">Most reviewed · among lowest scores</text>
   <rect class="bar-lo" x="820" y="538" width="80" height="18" rx="3"/>
   <text fill="#EEF1F4" x="850" y="552" font-size="14" font-family="IBM Plex Mono, Menlo, monospace" text-anchor="middle">4</text>
 
-  <text class="mono" x="80" y="616" font-size="13">Sanjay C. · ecogetaway/oss-accessibility-inclusion · rubric 0–12 · re-verified 29 Jul 2026</text>
+  <text class="mono" x="80" y="616" font-size="13">Sanjay C. · ecogetaway/oss-accessibility-inclusion · rubric 0–12 · re-verified 4 Aug 2026</text>
 </svg>
