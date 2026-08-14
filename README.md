@@ -135,7 +135,7 @@ Drop-in files any project can adopt today (same links as [Try this first](#try-t
 - [`ACCESSIBILITY.md`](ACCESSIBILITY.md) — project accessibility statement: scope, conformance target, testing expectations, known limitations, contact path.
 - [`.github/ISSUE_TEMPLATE/accessibility.yml`](.github/ISSUE_TEMPLATE/accessibility.yml) — structured accessibility issue form.
 - [`.github/PULL_REQUEST_TEMPLATE/accessibility.md`](.github/PULL_REQUEST_TEMPLATE/accessibility.md) — **primary CTA** — a11y PR template with user impact, WCAG mapping, AT verification, and a non-expert reviewer checklist.
-- CONTRIBUTING.md accessibility section — see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+- [`templates/CONTRIBUTING-accessibility-section.md`](templates/CONTRIBUTING-accessibility-section.md) — accessibility section to paste into your own project's `CONTRIBUTING.md`.
 - [`signals/a11y-signals.schema.yml`](signals/a11y-signals.schema.yml) — draft machine-readable posture file (analogous to CODEOWNERS); examples in [`signals/examples/`](signals/examples/).
 
 Not yet built: a validator for the signals schema (see [`roadmap.md`](roadmap.md)).
@@ -161,12 +161,13 @@ Contributors with disabilities are welcome. If an accommodation would help with 
     ├── README.md
     ├── LICENSE                  (Apache 2.0)
     ├── ACCESSIBILITY.md
-    ├── CONTRIBUTING.md
+    ├── CONTRIBUTING.md          (how to contribute to this research)
     ├── problem-definition.md
     ├── roadmap.md
     ├── review-rubric.md
     ├── case-studies/
     ├── signals/
+    ├── templates/               (drop-in files for your own project)
     └── .github/
         ├── ISSUE_TEMPLATE/accessibility.yml
         └── PULL_REQUEST_TEMPLATE/accessibility.md
