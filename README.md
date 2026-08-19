@@ -32,7 +32,7 @@ Seven real accessibility PRs across Bootstrap, MUI, VS Code, and Storybook, each
 
 No case reaches the 10–12 band the rubric describes as normal for an accessibility-mature project. The range is 4 to 9, across four of the best-resourced front-end projects in open source.
 
-_The [Bootcamp write-up](https://medium.com/@sanjaysc/can-your-project-actually-review-an-accessibility-contribution-15d055e24eb1) draws on six of these seven cases — the set that carries the argument — and cites the pre-revision scores. Five scores changed in the re-verification pass of 29 July 2026, including VS Code #324192, reduced from 11/12 to 8/12 because the original scoring credited the upstream process for criteria the record did not evidence. Where the article and this repository differ, the repository is current._
+_The [Bootcamp write-up](https://medium.com/design-bootcamp/can-your-project-actually-review-an-accessibility-contribution-15d055e24eb1) draws on six of these seven cases — the set that carries the argument — and cites the pre-revision scores. Five scores changed in the re-verification pass of 29 July 2026, including VS Code #324192, reduced from 11/12 to 8/12 because the original scoring credited the upstream process for criteria the record did not evidence. Where the article and this repository differ, the repository is current._
 
 Four findings the scores surface — full synthesis in [signals/review-patterns-v0.2.md](signals/review-patterns-v0.2.md):
 
