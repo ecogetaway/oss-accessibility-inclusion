@@ -8,7 +8,7 @@ This repository investigates whether accessibility inclusion is a missing infras
 
 This is a companion project to [oss-language-inclusion](https://github.com/ecogetaway/oss-language-inclusion), applying the same evidence-first method to a second under-served contribution domain.
 
-**Provenance.** Part of the **OSS Infrastructure Initiative** (Sanjay C. and Aniruddh Raghavendra) — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
+**Provenance.** Part of the **OSS Infrastructure Initiative** — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
 
 _Status as of 4 August 2026: seven scored case studies, a review rubric, and a draft a11y-signals.yml. All seven re-verified three times — API on 27 July, live pages on 29 July, and every diff, commit and linked issue on 4 August; five scores changed in total and several cross-case patterns were corrected or extended._
 
