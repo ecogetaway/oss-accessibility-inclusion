@@ -1,0 +1,20 @@
+# --- working documents: never publish (managed) ---
+# Engagement/outreach plans, funding proposals, cover notes and unpublished
+# article drafts stay on disk but must never reach this public repo.
+# If one ever truly belongs here: git add -f <path>
+
+*.docx
+*.doc
+/A11y/
+**/outreach/
+**/drafts/
+*ngagement-Plan*
+*ngagement-plan*
+
+# --- OS and Office noise ---
+.DS_Store
+~$*
+.~lock.*
+
+# --- build ---
+node_modules/
