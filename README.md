@@ -101,7 +101,7 @@ There is also a security dimension: ARIA attributes are injected into the DOM, a
 
 ## Method
 
-We select recent (2026), merged or active accessibility pull requests in popular open source projects and analyze each against a standard review rubric:
+We select recent (ideally 2025–2026), public accessibility pull requests in open source projects and analyze each against a standard review rubric:
 
 - Was **user impact** stated in terms of affected users and tasks?
 - Was the change **mapped to WCAG success criteria**?
@@ -109,6 +109,8 @@ We select recent (2026), merged or active accessibility pull requests in popular
 - Did reviewers show **confidence signals** (substantive a11y review vs. rubber-stamp)?
 - What **stalled, what worked**, and what did maintainers and contributors say about the process?
 - Was user impact described in **direct, specific language** (e.g., "VoiceOver users") rather than euphemism or generality?
+
+Labels or the word “a11y” alone are not enough — we screen candidates for a real user barrier and a scorable public thread before anything becomes a case study. How we find and screen PRs: [Simple Explainer §6a](docs/OSS-A11y-Simple-Explainer.md#6a-how-we-identify-real-accessibility-prs-and-accessibility-changes) (same doc on the [hub](https://github.com/ecogetaway/ecogetaway.github.io/blob/main/OSS-A11y-Simple-Explainer.md)).
 
 Each case study records the contribution, the review pattern observed, and the infrastructure gap it illustrates.
 
