@@ -10,7 +10,7 @@ This is a companion project to [oss-language-inclusion](https://github.com/ecoge
 
 **Provenance.** Part of the **OSS Infrastructure Initiative** — an evidence-first portfolio applying one method across three under-served open source contribution domains: internationalization, accessibility, and AI contribution. First published July 2026. Full portfolio under [Companion Projects](#companion-projects) below.
 
-**Overview and related work:** the [Accessibility contribution review workstream page](https://oss-infrastructure-initiative.netlify.app/accessibility-contribution-review) on the OSS Infrastructure Initiative site, alongside the [other workstreams](https://oss-infrastructure-initiative.netlify.app/).
+**Overview and related work:** the [Accessibility contribution review workstream page](https://oss-infrastructure-initiative.netlify.app/accessibility-contribution-review) on the OSS Infrastructure Initiative site, alongside the [other workstreams](https://oss-infrastructure-initiative.netlify.app/). How the research is done: [method and evidence rules](https://ecogetaway.github.io/method.html).
 
 _Status as of 4 August 2026: seven scored case studies, a review rubric, and a draft a11y-signals.yml. All seven re-verified three times — API on 27 July, live pages on 29 July, and every diff, commit and linked issue on 4 August; five scores changed in total and several cross-case patterns were corrected or extended._
 
